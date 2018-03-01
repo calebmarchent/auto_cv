@@ -1,35 +1,27 @@
 <head>
-Caleb Marchent
-
-    {{ positions.amino.company_name }}
 </head>
 <body>
 
-Caleb Marchent
+<h1>Caleb Marchent</h1>
 9 Goldfinch Drive, Cottenham, Cambridge, CB24 8XY | 07803 296105 | caleb.marchent@iee.org
 
-Summary
+<h2>Summary</h2>
 Software Engineer with 20 years experience, predominantly as a hands-on developer leading teams of highly skilled engineers to deliver products using whatever technology is required. Seeks another hands-on technical role, working closely in a team with other engineers to successfully deliver products that satisfy customers.
 
 Holds a rare combination of talents; a broad knowledge of the development, production and support of software, the ability to write code, script systems and use tools while at the same time - create, mentor and manage teams that can do this on a larger scale. Grace under pressure while dealing with demanding customers from around the world and delivering on tight deadlines.
 
-Key Skills
+<h2>Key Skills</h2>
 
-Experience
-Amino Communications	Software Development Manager	2010 - 2018
-Linux software development for media-streaming devices and services.
+<h2>Experience</h2>
+<table>
+    <tr><td>{{ positions.amino.company_name }}<td>{{ positions.amino.title }}<td>{{ positions.amino.start.strftime('%Y') }} - {{ positions.amino.finish.strftime('%Y') }}</td>
+</table>
 
-Migrated software development from CVS to Git including retention of complete version history allowing developers to take advantage of modern version control tool while retaining the ability to go back and understand the decisions behind code implementation.
-Developed automatic build and release systems to assure the stability of the common code base, aligning build and release processes to avoid release time delays
-Developed and maintained Debian packages for toolchains and common development tools ensuring a consistent build environment
-Scrum Master and team lead for AmiNET firmware, and later AVG (Audio, Video and Graphics) teams; under which I also developed the companies first scrum tool using MySQL, perl, HTML and Javascript
-Platform ports Amino’s AmiNET Linux media streaming stack to ST 7105 and later Intel Berryville family of STBs
-As Amino acquired Entone, lead first cross-site team of Amino engineers developing for the Entone enable stack; successfully delivering Amino’s first MPEG Dash integration.
-For Amino acquisition of Booxmedia, led the first cross-site team of Amino engineers taking our existing skills in Linux, multimedia decode for consumer devices and re-apply in the the delivery of OTT CloudTV video services
-Delivered a complete set of demonstrator services used to support the sales team in winning opportunities; including developing the ground-breaking concept of using an Amino STB as the cable to IP turn-around acting as the content source for a complete live video and network PVR recording service.
-Working closing with our client through daily cross-company scrum stand-ups delivered Amino’s first end-to-end Service to screen multi-media video solution delivered through multiple DRM protected ABR formats (HLS, DASH, MSS). Including live streaming services (264 channel), recording services (50+ channels), radio channels, pause liveTV
-Acting as development support investigated and resolved production issues across the system ranging mobile applications (iOS, Android); HTML5 UI, Web Services (PHP, Yii), media backend (Python); deployment systems (Ansible, Docker), Networking issues (e.g. IGMP)
+<p>{{ positions.amino.company_summary }}</p>
 
+{% for achievement in achievements %}
+<li>{{ achievement.desc }}
+{% endfor %}
 Global Graphics	Software Release Co-ordinator	2008 - 2010
 Planned iteration and release content with input from project team, product management, quality assurance and support
 Co-ordinated activities associated with software configuration management and delivered high-quality releases to agreed plans

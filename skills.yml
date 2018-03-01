@@ -28,6 +28,7 @@ skills:
 positions:
   amino:
     company_name: "Amino Communications"
+    company_summary: "Linux software development for media-streaming devices and services."
     title: "Software Development Manager"
     start: 2010-05-24
     finish: 2018-03-02
@@ -62,8 +63,7 @@ achievements:
   desc: "Developed automatic build and release systems to assure the stability of the common code base, aligning build and release processes to avoid release time delays"
 
 - skills_applied:
-
-- company: amino
+  company: amino
   desc: "Migrated software development from CVS to Git including retention of complete version history allowing developers to take advantage of modern version control tool while retaining the ability to go back and understand the decisions behind code implementation."
 
 - company: amino

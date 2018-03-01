@@ -16,9 +16,11 @@ with open("skills.yml", 'r') as stream:
 
 env = Environment(
     loader=PackageLoader('gencv', 'templates'),
-    autoescape=select_autoescape(['html', 'xml'])
+    autoescape=select_autoescape(['html', 'rtf'])
 )
 
 template = env.get_template('legacy_cv.html')
 
-print template.render(skills_db);
+# to save the results
+with open("generated_cv.html", "wb") as fh:
+    fh.write(template.render(skills_db).encode('utf-8'))
