@@ -19,6 +19,10 @@ skills:
 - name: Bash
   categories:
   - "Shell Scripting"
+- name: Scrum
+  categories:
+  - Agile
+- name:
 
 
 positions:
@@ -32,34 +36,61 @@ positions:
     title: "Software Release Coordinator"
     start: 2008
     finish: 2010
-
+  ttpcom:
+    company_name: "TTPCom"
+    title: "Staff Senior Software Engineer"
+    start: 2003
+    finish: 2008
+  pace:
+    company_name: "Pace Micro Technology"
+    title: "Software Quality Assurance Engineer"
+    start: 2000
+    finish: 2003
+  philips:
+    company_name: "Philips Communications"
+    title: "Software Engineer"
+    start: 1998
+    finish: 2000
 
 achievements:
 - skills_applied:
   - Git
   - CVS
   desc: "Migrated software development from CVS to Git including retention of complete version history allowing developers to take advantage of modern version control tool while retaining the ability to go back and understand the decisions behind code implementation."
+
 - skills_applied:
   desc: "Developed automatic build and release systems to assure the stability of the common code base, aligning build and release processes to avoid release time delays"
+
 - skills_applied:
-- company: Amino
+
+- company: amino
   desc: "Migrated software development from CVS to Git including retention of complete version history allowing developers to take advantage of modern version control tool while retaining the ability to go back and understand the decisions behind code implementation."
-- company: Amino
+
+- company: amino
   desc: "Developed automatic build and release systems to assure the stability of the common code base, aligning build and release processes to avoid release time delays"
-- company: Amino
+
+- company: amino
   desc: "Developed and maintained Debian packages for toolchains and common development tools ensuring a consistent build environment "
-- company: Amino
+
+- company: amino
   desc: "Scrum Master and team lead for AmiNET firmware, and later AVG (Audio, Video and Graphics) teams; under which I also developed the companies first scrum tool using MySQL, perl, HTML and Javascript"
-- company: Amino
+
+- company: amino
   desc: "Platform ports Amino’s AmiNET Linux media streaming stack to ST 7105 and later Intel Berryville family of STBs"
-- company: Amino
+
+- company: amino
   desc: "As Amino acquired Entone, lead first cross-site team of Amino engineers developing for the Entone enable stack; successfully delivering Amino’s first MPEG Dash integration."
-- company: Amino
+
+- company: amino
   desc: "For Amino acquisition of Booxmedia, led the first cross-site team of Amino engineers taking our existing skills in Linux, multimedia decode for consumer devices and re-apply in the the delivery of OTT CloudTV video services "
-- company: Amino
+
+- company: amino
   desc: "Delivered a complete set of demonstrator services used to support the sales team in winning opportunities; including developing the ground-breaking concept of using an Amino STB as the cable to IP turn-around acting as the content source for a complete live video and network PVR recording service. "
-- company: Amino
+
+- company: amino
   desc: "Working closing with our client through daily cross-company scrum stand-ups delivered Amino’s first end-to-end Service to screen multi-media video solution delivered through multiple DRM protected ABR formats (HLS, DASH, MSS). Including live streaming services (264 channel), recording services (50+ channels), radio channels, pause liveTV"
-- company: Amino
+
+- company: amino
   desc: "Acting as development support investigated and resolved production issues across the system ranging mobile applications (iOS, Android); HTML5 UI, Web Services (PHP, Yii), media backend (Python); deployment systems (Ansible, Docker), Networking issues (e.g. IGMP)"
+
 
