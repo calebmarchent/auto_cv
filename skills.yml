@@ -1,0 +1,29 @@
+skills:
+- name: Agile
+- name: JIRA
+- name: Docker
+- name: Vagrant
+- name: Ansible
+- name: Jenkins
+  categories:
+  - "Continuous Integration"
+  - "Build Automation"
+- name: Git
+  categories:
+  - "Version Control"
+  - "Software Configuration Management"
+- name: Zabbix
+- name: Linux Software Development
+- name: Debian Administration and Package Development
+- name: Autotools
+- name: Bash
+  categories:
+  - "Shell Scripting"
+
+
+
+
+
+
+
+ "Migrated software development from CVS to Git including retention of complete version history allowing developers to take advantage of modern version control tool while retaining the ability to go back and understand the decisions behind code implementation."
