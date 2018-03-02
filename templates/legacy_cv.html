@@ -13,15 +13,20 @@ Holds a rare combination of talents; a broad knowledge of the development, produ
 <h2>Key Skills</h2>
 
 <h2>Experience</h2>
+{% for position in positions %}
+<hr>
 <table>
-    <tr><td>{{ positions.amino.company_name }}<td>{{ positions.amino.title }}<td>{{ positions.amino.start.strftime('%Y') }} - {{ positions.amino.finish.strftime('%Y') }}</td>
+<tr><td>{{ position.company_name }}<td>{{ position.title }}<td>{{ position.start }} - {{ position.finish }}</td>
 </table>
-
-<p>{{ positions.amino.company_summary }}</p>
-
-{% for achievement in achievements %}
+{% if position.company_summary is defined %}
+<p>{{ position.company_summary }}</p>
+{% endif %}
+{% set achievements_here = achievements[position.brief] %}
+{% for achievement in achievements_here %}
 <li>{{ achievement.desc }}
 {% endfor %}
+{% endfor %}
+
 Global Graphics	Software Release Co-ordinator	2008 - 2010
 Planned iteration and release content with input from project team, product management, quality assurance and support
 Co-ordinated activities associated with software configuration management and delivered high-quality releases to agreed plans
