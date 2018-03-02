@@ -109,3 +109,9 @@ achievements:
     - desc: "Developed windows software for the configuration of and programming parameters of a pager"
     - desc: "Designed, coded, debugged and maintained the Clock, IR and Configuration Manager components of a 2-way pager."
     - desc: "Independently wrote automated test harness software, controlling the hardware inputs and monitoring chip outputs."
+
+education:
+- desc: "Certified ScrumMaster (CSM)"
+  date: 2015
+- desc: "PRINCE2"
+  date: 2008
