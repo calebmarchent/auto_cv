@@ -95,36 +95,63 @@ achievements:
 
   global_graphics:
     - desc: "Planned iteration and release content with input from project team, product management, quality assurance and support"
+      hidden: 1
     - desc: "Co-ordinated activities associated with software configuration management and delivered high-quality releases to agreed plans"
+      hidden: 1
     - desc: "First action on joining team was to initiate daily regression tests to eliminate associated delays in development and QA"
+      hidden: 1
     - desc: "Formulated framework for developer tests, using QT’s built-in javascript technology. Used to implement tests during module development which were then built into a suite for avoiding regressions in subsequent iterations"
+      hidden: 1
     - desc: "Defined change request tracking processes and then evolved it throughout the project to support teams constant process improvement"
+      hidden: 1
     - desc: "Scripted automated import processes for 3rd party modules, using Perl and Perforce, which improved consistency and minimised required effort for the regular import cycles"
+      hidden: 1
     - desc: "Extended VB skills to Lotus Script, then used to migrate product backlogs into a combined database simplifying cross-team request tracking, progress reporting and removing significant administrative overhead"
+      hidden: 1
     - desc: "Acted as Scrum Master for the first Global Graphics project to use Agile methods, adapting and advancing existing traditional processes and tools to expedite a rapid transition while minimising the impact of the change on team productivity"
+      hidden: 1
     - desc: "Investigated bugs prioritising and channelling to correct team for resolution"
+      hidden: 1
 
   ttpcom:
     - desc: "Used in-depth understanding of build tools, TTPCom's release system and Perforce to create a tool chain that brought patches and releases together in a single process and reduced fix delivery times from 1 month to less than 1 day"
+      hidden: 1
     - desc: "Aligned development and client software configurations eliminating time to debug mismatches"
+      hidden: 1
     - desc: "Co-ordinated with other departments to agree a branching and integration strategy allowing a wider range of options to be delivered to future clients"
+      hidden: 1
     - desc: "Wrote Perl scripts which analysed the build options applied to each software module in both development and client profiles pre-emptively identifying and resolving latent defects"
+      hidden: 1
     - desc: "Used SQL and Perl skills to write tool to export issue tracking history empowering clients to resolve common issues independently"
+      hidden: 1
     - desc: "Defined Support Processes for the Motorola WiMAX programme optimising communication with client engineers, while maintaining project control"
+      hidden: 1
     - desc: "Chaired software issue reviews with customers ensuring correct prioritisation, open communication and building customer confidence"
+      hidden: 1
     - desc: "Led co-operation between not only organisation and client but also the network operator and equipment provider to complete resolution of issues"
+      hidden: 1
     - desc: "Designed and implemented framework migrating TTPCom tracking data to Motorola's preferred solution reducing cost of maintaining multiple systems"
+      hidden: 1
     - desc: "Lead technical interface to strategic Asian customers successfully launching the companies first 3G handsets into Vodafone and O2"
+      hidden: 1
     - desc: "Managed integration of TTPCom's MP3 and AMR solutions leading to successful launches"
+      hidden: 1
     - desc: "Recruited test team leader, software and test engineers who became key to project success"
+      hidden: 1
     - desc: "Integrated AJAR (TTPCom's C++ Application Layer) onto new 3G chip-set overcoming platform, compiler and configuration issues"
+      hidden: 1
     - desc: "Investigated and debugged protocol stack issues through 2G physical layer, RF, DSP, L1, AT interface, 3G protocol stack and up to application"
+      hidden: 1
 
   pace:
     - desc: "Negotiated and managed to budget a $1M supplier contract for development of software testing suite, a vital tool to build the long-term quality of Pace's MSTV product line"
+      hidden: 1
     - desc: "Organised, chaired and provided technical input to software design and code reviews"
+      hidden: 1
     - desc: "Designed and executed manual and automated system tests for Embedded Linux set-top-boxes"
+      hidden: 1
     - desc: "Created systems for reporting bug status into project leadership teams"
+      hidden: 1
 
   philips:
     - desc: "Developed windows software for the configuration of and programming parameters of a pager"
