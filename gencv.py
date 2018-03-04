@@ -53,7 +53,7 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     document.core_properties.title = "Caleb Marchent "
     document.core_properties.author = "Caleb Marchent - Curriculum Vitae"
     document.core_properties.created = datetime.datetime.now()
-    document.core_properties.comments = "Generated Automatically\nSource code available at https://github.com/calebmarchent/auto_cv.git"
+    document.core_properties.comments = "Generated Automatically\nSource code available at:\nhttps://github.com/calebmarchent/auto_cv.git"
 
     document.add_heading('Caleb Marchent', 0)
 
