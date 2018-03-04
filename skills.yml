@@ -24,6 +24,16 @@ skills:
   - Agile
 - name:
 
+skill_groups:
+-
+  - "Agile"
+-
+  - "JIRA"
+  - "Confluence"
+-
+  - "Line Management"
+
+
 
 positions:
   - brief: amino
