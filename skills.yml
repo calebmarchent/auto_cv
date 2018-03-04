@@ -26,22 +26,33 @@ skills:
 
 skill_groups:
 -
-  - "Agile"
--
+  - "Certified Scrum Master"
   - "JIRA"
-  - "Confluence"
+  - "Docker, Vagrant, Ansible"
+  - "Jenkins"
+  - "Git"
+  - "Zabbix service monitoring"
 -
-  - "Line Management"
-
-
+  - "Linux Development for both consumer device and servers"
+  - "IP Video Delivery: IGMP, HLS, MPEG DASH"
+  - "Debian Administration and Package Development"
+  - "Autotools"
+-
+  - "Bash/POSIX shell scripting"
+  - "SQL"
+  - "Perl"
+  - "Python"
+  - "Ansible"
+  - "C, C++"
+  - "GNU Make"
 
 positions:
   - brief: amino
     company_name: "Amino Communications"
     company_summary: "Linux software development for media-streaming devices and services."
     title: "Software Development Manager"
-    start: 2010-05-24
-    finish: 2018-03-02
+    start: 2010
+    finish: 2018
   - brief: global_graphics
     company_name: "Global Graphics"
     title: "Software Release Coordinator"
@@ -125,3 +136,6 @@ education:
   date: 2015
 - desc: "PRINCE2"
   date: 2008
+- desc: "MEng. (Hons) Electronic Engineering with Computer Science: 2-1"
+  date: "1993 - 1998"
+  additional_info: "University of Wales Swansea\n4-year masters course plus one gap year in Fachhochschule Mannheim"
