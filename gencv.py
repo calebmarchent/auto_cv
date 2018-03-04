@@ -57,6 +57,7 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
         print "{} ({})".format(style.name, style.type)
 
     document.styles['Title'].paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    document.styles['Normal'].font.size = Pt(8)
 
     # Configure the document properties:
     document.core_properties.title = "Caleb Marchent"
@@ -67,6 +68,7 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     document.add_heading('Caleb Marchent', 0)
 
     p = document.add_paragraph('9 Goldfinch Drive, Cottenham, Cambridge, CB24 8XY | 07803 296105 | caleb.marchent@iee.org')
+    p.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
     document.add_heading('Summary', level=2)
 
