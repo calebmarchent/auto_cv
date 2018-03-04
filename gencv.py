@@ -5,7 +5,9 @@ CV Generator
 from jinja2 import Environment, PackageLoader, select_autoescape
 import ruamel.yaml as yaml
 from docx import Document
-from docx.shared import Inches
+from docx.shared import Inches, Pt
+from docx.enum.text import WD_TAB_ALIGNMENT, WD_TAB_LEADER
+
 import datetime
 
 cvdb = {}
@@ -50,13 +52,12 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     document = Document()
 
     # Configure the document properties:
-    document.core_properties.title = "Caleb Marchent "
+    document.core_properties.title = "Caleb Marchent"
     document.core_properties.author = "Caleb Marchent - Curriculum Vitae"
     document.core_properties.created = datetime.datetime.now()
     document.core_properties.comments = "Generated Automatically\nSource code available at:\nhttps://github.com/calebmarchent/auto_cv.git"
 
     document.add_heading('Caleb Marchent', 0)
-
 
     p = document.add_paragraph('9 Goldfinch Drive, Cottenham, Cambridge, CB24 8XY | 07803 296105 | caleb.marchent@iee.org')
 
@@ -69,24 +70,28 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     # Find the maximum number of skills in a group
     rows = max(len(skill_group) for skill_group in processed_cvdb['skill_groups'])
 
-    table = document.add_table(rows=rows, cols=len(processed_cvdb['skill_groups']))
+    table = document.add_table(rows=1, cols=len(processed_cvdb['skill_groups']))
     col = 0
+
+    # FIXME: Spurious line at start of cell
+    # Happens because there has to be cell contrent; there does not appear to be an API to replace the existing text
+    # with formatted text
+
     for skill_group in processed_cvdb['skill_groups']:
-        row = 0
         hdr_cells = table.columns[col].cells
         for skill in skill_group:
-            hdr_cells[row].text = skill
-            row += 1
+            hdr_cells[0].add_paragraph(skill, style='ListBullet')
         col += 1
 
     document.add_heading('Experience', level=2)
 
     for position in processed_cvdb['positions']:
-        table = document.add_table(rows=1, cols=3)
-        hdr_cells = table.rows[0].cells
-        hdr_cells[0].text = position['company_name']
-        hdr_cells[1].text = position['title']
-        hdr_cells[2].text = str(position['start']) + " - " + str(position['finish'])
+        p = document.add_paragraph("{}\t{}\t{}".format(position['company_name'],
+                                             position['title'],
+                                             str(position['start']) + " - " + str(position['finish'])))
+
+        p.paragraph_format.tab_stops.add_tab_stop(Inches(3), WD_TAB_ALIGNMENT.CENTER)
+        p.paragraph_format.tab_stops.add_tab_stop(Inches(6), WD_TAB_ALIGNMENT.RIGHT)
 
         if 'company_summary' in position:
             document.add_paragraph(position['company_summary'])
@@ -103,4 +108,4 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
         hdr_cells[1].text = str(experience['date'])
 
 
-    document.save('demo.docx')
+    document.save('curriculum_vitae.docx')
