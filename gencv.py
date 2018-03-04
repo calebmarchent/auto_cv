@@ -7,6 +7,7 @@ import ruamel.yaml as yaml
 from docx import Document
 from docx.shared import Inches, Pt
 from docx.enum.text import WD_TAB_ALIGNMENT, WD_TAB_LEADER
+from docx.enum.text import WD_ALIGN_PARAGRAPH
 
 import datetime
 
@@ -22,6 +23,7 @@ with open("skills.yml", 'r') as stream:
 processed_cvdb = {}
 processed_cvdb['skill_groups'] = cvdb['skill_groups']
 processed_cvdb['positions'] = cvdb['positions']
+processed_cvdb['elevator_pitch'] = cvdb['elevator_pitch']
 
 processed_cvdb['achievements'] = {}
 for position, position_achievements in cvdb['achievements'].iteritems():
@@ -51,6 +53,11 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
 
     document = Document()
 
+    for style in document.styles:
+        print "{} ({})".format(style.name, style.type)
+
+    document.styles['Title'].paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
+
     # Configure the document properties:
     document.core_properties.title = "Caleb Marchent"
     document.core_properties.author = "Caleb Marchent - Curriculum Vitae"
@@ -62,8 +69,9 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     p = document.add_paragraph('9 Goldfinch Drive, Cottenham, Cambridge, CB24 8XY | 07803 296105 | caleb.marchent@iee.org')
 
     document.add_heading('Summary', level=2)
-    p = document.add_paragraph('Software Engineer with 20 years experience, predominantly as a hands-on developer leading teams of highly skilled engineers to deliver products using whatever technology is required. Seeks another hands-on technical role, working closely in a team with other engineers to successfully deliver products that satisfy customers.')
-    p = document.add_paragraph('Holds a rare combination of talents; a broad knowledge of the development, production and support of software, the ability to write code, script systems and use tools while at the same time - create, mentor and manage teams that can do this on a larger scale. Grace under pressure while dealing with demanding customers from around the world and delivering on tight deadlines.')
+
+    for para in processed_cvdb['elevator_pitch']:
+        p = document.add_paragraph(para)
 
     document.add_heading('Key Skills', level=2)
 
