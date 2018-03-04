@@ -7,14 +7,27 @@ import ruamel.yaml as yaml
 from docx import Document
 from docx.shared import Inches
 
-skills_db = {}
+cvdb = {}
 
 with open("skills.yml", 'r') as stream:
     try:
-        skills_db = yaml.load(stream, Loader=yaml.Loader)
+        cvdb = yaml.load(stream, Loader=yaml.Loader)
     except yaml.YAMLError as exc:
         print(exc)
 
+# Process the imported YAML; creating the structure required for the document from the source database
+processed_cvdb = {}
+processed_cvdb['skill_groups'] = cvdb['skill_groups']
+processed_cvdb['positions'] = cvdb['positions']
+
+processed_cvdb['achievements'] = {}
+for position, position_achievements in cvdb['achievements'].iteritems():
+    processed_cvdb['achievements'][position] = list()
+    for achievement in position_achievements:
+        if 'hidden' not in achievement:
+            processed_cvdb['achievements'][position].append(achievement)
+
+processed_cvdb['education'] = cvdb['education']
 
 OUTPUT_DOCUMENT_TYPE = "word" # or "html"
 
@@ -29,7 +42,7 @@ if OUTPUT_DOCUMENT_TYPE == "html":
 
     # to save the results
     with open("generated_cv.html", "wb") as fh:
-        fh.write(template.render(skills_db).encode('utf-8'))
+        fh.write(template.render(processed_cvdb).encode('utf-8'))
 
 elif OUTPUT_DOCUMENT_TYPE == "word":
 
@@ -47,11 +60,11 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     document.add_heading('Key Skills', level=2)
 
     # Find the maximum number of skills in a group
-    rows = max(len(skill_group) for skill_group in skills_db['skill_groups'])
+    rows = max(len(skill_group) for skill_group in processed_cvdb['skill_groups'])
 
-    table = document.add_table(rows=rows, cols=len(skills_db['skill_groups']))
+    table = document.add_table(rows=rows, cols=len(processed_cvdb['skill_groups']))
     col = 0
-    for skill_group in skills_db['skill_groups']:
+    for skill_group in processed_cvdb['skill_groups']:
         row = 0
         hdr_cells = table.columns[col].cells
         for skill in skill_group:
@@ -61,7 +74,7 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
 
     document.add_heading('Experience', level=2)
 
-    for position in skills_db['positions']:
+    for position in processed_cvdb['positions']:
         table = document.add_table(rows=1, cols=3)
         hdr_cells = table.rows[0].cells
         hdr_cells[0].text = position['company_name']
@@ -71,12 +84,12 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
         if 'company_summary' in position:
             document.add_paragraph(position['company_summary'])
 
-        for achievement in skills_db['achievements'][position['brief']]:
+        for achievement in processed_cvdb['achievements'][position['brief']]:
             document.add_paragraph(achievement['desc'], style='ListBullet')
 
     document.add_heading('Education', level=2)
 
-    for experience in skills_db['education']:
+    for experience in processed_cvdb['education']:
         table = document.add_table(rows=1, cols=2)
         hdr_cells = table.rows[0].cells
         hdr_cells[0].text = experience['desc'] + (experience['additional_info'] if 'additional_info' in experience else "")
