@@ -102,10 +102,9 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     document.add_heading('Education', level=2)
 
     for experience in processed_cvdb['education']:
-        table = document.add_table(rows=1, cols=2)
-        hdr_cells = table.rows[0].cells
-        hdr_cells[0].text = experience['desc'] + (experience['additional_info'] if 'additional_info' in experience else "")
-        hdr_cells[1].text = str(experience['date'])
-
+        p = document.add_paragraph("{}\t{}".format(experience['desc'], experience['date']))
+        p.paragraph_format.tab_stops.add_tab_stop(Inches(6), WD_TAB_ALIGNMENT.RIGHT)
+        if 'additional_info' in experience:
+            p.add_run("\n{}".format(experience['additional_info']))
 
     document.save('curriculum_vitae.docx')
