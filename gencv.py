@@ -6,6 +6,7 @@ from jinja2 import Environment, PackageLoader, select_autoescape
 import ruamel.yaml as yaml
 from docx import Document
 from docx.shared import Inches
+import datetime
 
 cvdb = {}
 
@@ -47,6 +48,12 @@ if OUTPUT_DOCUMENT_TYPE == "html":
 elif OUTPUT_DOCUMENT_TYPE == "word":
 
     document = Document()
+
+    # Configure the document properties:
+    document.core_properties.title = "Caleb Marchent "
+    document.core_properties.author = "Caleb Marchent - Curriculum Vitae"
+    document.core_properties.created = datetime.datetime.now()
+    document.core_properties.comments = "Generated Automatically\nSource code available at https://github.com/calebmarchent/auto_cv.git"
 
     document.add_heading('Caleb Marchent', 0)
 
