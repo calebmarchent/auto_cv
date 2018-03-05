@@ -47,11 +47,14 @@ skill_groups:
   - "Linux Development for both consumer device and servers"
   - "Debian Administration and Package Development"
 -
-  - "Line Management:\n Approach tailored to individual"
+  - "Line Management:\nApproach tailored to individual"
   - "Recruiting and Building Teams"
-  - "Mentoring"
-  - "Goal Setting, tracking"
+  - "Mentoring, Goal Setting, tracking"
   - "Software Change and Configuration Management"
+  - "Automates repetitive tasks"
+  - "Completer Finisher"
+  - "Leads with collaboration and clear vision"
+
 
 positions:
   - brief: amino
