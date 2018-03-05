@@ -96,9 +96,11 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     document.add_heading('Experience', level=2)
 
     for position in processed_cvdb['positions']:
-        p = document.add_paragraph("{}\t{}\t{}".format(position['company_name'],
-                                             position['title'],
-                                             str(position['start']) + " - " + str(position['finish'])))
+        p = document.add_paragraph()
+        p.add_run(position['company_name']).bold = True
+        p.add_run("\t" + position['title'] + "\t")
+        p.add_run(str(position['start']) + " - " + str(position['finish'])).bold = True
+
 
         p.paragraph_format.tab_stops.add_tab_stop(Inches(3), WD_TAB_ALIGNMENT.CENTER)
         p.paragraph_format.tab_stops.add_tab_stop(Inches(6), WD_TAB_ALIGNMENT.RIGHT)
@@ -112,7 +114,8 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     document.add_heading('Education', level=2)
 
     for experience in processed_cvdb['education']:
-        p = document.add_paragraph("{}\t{}".format(experience['desc'], experience['date']))
+        p = document.add_paragraph()
+        p.add_run("{}\t{}".format(experience['desc'], experience['date'])).bold = True
         p.paragraph_format.tab_stops.add_tab_stop(Inches(6), WD_TAB_ALIGNMENT.RIGHT)
         if 'additional_info' in experience:
             p.add_run("\n{}".format(experience['additional_info']))

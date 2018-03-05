@@ -109,7 +109,7 @@ achievements:
       hidden: 1
     - desc: "Formulated framework for developer tests, using QT’s built-in javascript technology. Used to implement tests during module development which were then built into a suite for avoiding regressions in subsequent iterations"
       hidden: 1
-    - desc: "Defined change request tracking processes and then evolved it throughout the project to support teams constant process improvement"
+    - desc: "Defined change request tracking processes and then evolved it throughout the project to support team’s constant process improvement"
       hidden: 1
     - desc: "Scripted automated import processes for 3rd party modules, using Perl and Perforce, which improved consistency and minimised required effort for the regular import cycles"
       hidden: 1
