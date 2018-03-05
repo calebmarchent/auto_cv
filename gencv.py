@@ -66,7 +66,8 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
         print "{} ({})".format(style.name, style.type)
 
     document.styles['Title'].paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    document.styles['Normal'].font.size = Pt(8)
+    document.styles['Title'].paragraph_format.space_after = Pt(3)
+    document.styles['Normal'].font.size = Pt(10)
 
     # Configure the document properties:
     document.core_properties.title = "Caleb Marchent"
@@ -78,6 +79,7 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
 
     p = document.add_paragraph('9 Goldfinch Drive, Cottenham, Cambridge, CB24 8XY | 07803 296105 | caleb.marchent@iee.org')
     p.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
+#    p.style.font.size = Pt(8)
 
     document.add_heading('Summary', level=2)
 
@@ -106,6 +108,8 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
 
     for position in processed_cvdb['positions']:
         p = document.add_paragraph()
+        p.paragraph_format.space_after = Pt(3)
+
         p.add_run(position['company_name']).bold = True
         p.add_run("\t" + position['title'] + "\t")
         p.add_run(str(position['start']) + " - " + str(position['finish'])).bold = True
@@ -118,12 +122,14 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
             document.add_paragraph(position['company_summary'])
 
         for achievement in processed_cvdb['achievements'][position['brief']]:
-            document.add_paragraph(achievement['desc'], style='ListBullet')
+            p = document.add_paragraph(achievement['desc'], style='ListBullet')
+            p.style.font.size = Pt(9)
 
     document.add_heading('Education', level=2)
 
     for experience in processed_cvdb['education']:
         p = document.add_paragraph()
+        p.paragraph_format.space_after = Pt(0)
         p.add_run("{}\t{}".format(experience['desc'], experience['date'])).bold = True
         p.paragraph_format.tab_stops.add_tab_stop(Inches(6), WD_TAB_ALIGNMENT.RIGHT)
         if 'additional_info' in experience:
@@ -131,9 +137,12 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
 
     document.add_heading('Further Information', level=2)
     p = document.add_paragraph('Spoken Foreign Languages: German, Polish')
+    p.paragraph_format.space_after = Pt(0)
     p = document.add_paragraph('Interests: Mountain Biking (competed 3 times in annual Dusk-til-Dawn 8pm - 8am' +
                                ' endurance race.)')
-    p = document.add_paragraph('Full, clean driving licence and current passport, comfortable with travel for work purposes')
+    p.paragraph_format.space_after = Pt(0)
 
+    p = document.add_paragraph('Full, clean driving licence and current passport, comfortable with travel for work purposes')
+    p.paragraph_format.space_after = Pt(0)
 
     document.save('curriculum_vitae.docx')
