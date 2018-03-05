@@ -47,16 +47,18 @@ skill_groups:
   - "Linux Development for both consumer device and servers"
   - "Debian Administration and Package Development"
 -
-  - "Line Managment"
+  - "Line Management"
   - "Recruiting and Building Teams"
   - "Mentoring"
   - "Goal Setting, tracking"
+  - "Software Change and Configuration Management"
+  - ""
 
 positions:
   - brief: amino
     company_name: "Amino Communications"
     company_summary: 'Linux software development for media-streaming devices (STBs) and services. Hired to fill two roles:
-       Scrum Master for the Platform team and "toolsmith" developing toolschains, release systems and developer tools to ensure developer productivity'
+       Scrum Master for the Platform team and "toolsmith" developing toolchains, release systems and developer tools to ensure developer productivity'
     title: "Software Development Manager"
     start: 2010
     finish: 2018
