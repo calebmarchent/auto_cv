@@ -55,14 +55,14 @@ skill_groups:
 positions:
   - brief: amino
     company_name: "Amino Communications"
-    company_summary: "Linux software development for media-streaming devices and services."
+    company_summary: 'Linux software development for media-streaming devices (STBs) and services. Hired to fill two roles:
+       Scrum Master for the Platform team and "toolsmith" developing toolschains, release systems and developer tools to ensure developer productivity'
     title: "Software Development Manager"
     start: 2010
     finish: 2018
   - brief: global_graphics
     company_name: "Global Graphics"
-    company_summary: "Electronic document software company. Managed team of engineers to deliver PDF workflow software
-    for Windows"
+    company_summary: "Electronic document software; Managed team to deliver PDF workflow software for Windows"
     title: "Software Release Coordinator"
     start: 2008
     finish: 2010
@@ -178,3 +178,4 @@ education:
 - desc: "MEng. (Hons) Electronic Engineering with Computer Science: 2-1"
   date: "1993 - 1998"
   additional_info: "University of Wales Swansea\n4-year masters course plus one gap year in Fachhochschule Mannheim"
+  # FIXME: and in recruitment training and leadership training
