@@ -21,7 +21,16 @@ with open("skills.yml", 'r') as stream:
 
 # Process the imported YAML; creating the structure required for the document from the source database
 processed_cvdb = {}
-processed_cvdb['skill_groups'] = cvdb['skill_groups']
+processed_cvdb['skill_groups'] = list()
+row = 0
+for grp in cvdb['skill_groups']:
+    processed_cvdb['skill_groups'].append(list())
+    for skill in grp:
+        if 'hidden' not in cvdb['skill_groups']:
+            processed_cvdb['skill_groups'][row].append(skill)
+    row += 1
+
+
 processed_cvdb['positions'] = cvdb['positions']
 processed_cvdb['elevator_pitch'] = cvdb['elevator_pitch']
 
@@ -119,5 +128,12 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
         p.paragraph_format.tab_stops.add_tab_stop(Inches(6), WD_TAB_ALIGNMENT.RIGHT)
         if 'additional_info' in experience:
             p.add_run("\n{}".format(experience['additional_info']))
+
+    document.add_heading('Further Information', level=2)
+    p = document.add_paragraph('Spoken Foreign Languages: German, Polish')
+    p = document.add_paragraph('Interests: Mountain Biking (competed 3 times in annual Dusk-til-Dawn 8pm - 8am' +
+                               ' endurance race.)')
+    p = document.add_paragraph('Full, clean driving licence and current passport, comfortable with travel for work purposes')
+
 
     document.save('curriculum_vitae.docx')

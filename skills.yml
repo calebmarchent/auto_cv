@@ -33,25 +33,24 @@ skills:
 
 skill_groups:
 -
-  - "Certified Scrum Master"
-  - "JIRA"
-  - "Docker, Vagrant, Ansible"
-  - "Jenkins"
-  - "Git"
-  - "Zabbix service monitoring"
+  - "Agile:\nCertified Scrum Master"
+  - "Bug Tracking:\nJIRA, Bugzilla"
+  - "Build Automation: Jenkins"
+  - "Build Systems\nBuildroot, GNU Make, Autotools"
+  - "Version Control:\nGit, SVN, CVS, Peforce"
+#  - "Zabbix service monitoring"
+#  - "Cloud Tools:\nDocker, Vagrant, Ansible"
 -
-  - "Linux Development for both consumer device and servers"
-  - "IP Video Delivery: IGMP, HLS, MPEG DASH"
-  - "Debian Administration and Package Development"
-  - "Autotools"
--
-  - "Bash/POSIX shell scripting"
+  - "Script Development:\nBash, Perl, Python"
+  - "Programming:\nC, C++"
   - "SQL"
-  - "Perl"
-  - "Python"
-  - "Ansible"
-  - "C, C++"
-  - "GNU Make"
+  - "Linux Development for both consumer device and servers"
+  - "Debian Administration and Package Development"
+-
+  - "Line Managment"
+  - "Recruiting and Building Teams"
+  - "Mentoring"
+  - "Goal Setting, tracking"
 
 positions:
   - brief: amino
@@ -62,17 +61,23 @@ positions:
     finish: 2018
   - brief: global_graphics
     company_name: "Global Graphics"
+    company_summary: "Electronic document software company. Managed team of engineers to deliver PDF workflow software
+    for Windows"
     title: "Software Release Coordinator"
     start: 2008
     finish: 2010
   - brief: ttpcom
     company_name: "TTPCom"
+    company_summary: "Mobile Telecommunications; GSM, GPRS and the first Intel-based 3G handset. Appointed to provide
+    dedicated engineering support for integration to customers using TTPCom mobile stack. Later moved on to run teams
+    and then then run the support department"
     title: "Staff Senior Software Engineer"
     start: 2003
     finish: 2008
   - brief: pace
     company_name: "Pace Micro Technology"
     title: "Software Quality Assurance Engineer"
+    company_summary: "Automated test system development, including C based API validation"
     start: 2000
     finish: 2003
   - brief: philips
@@ -84,18 +89,13 @@ positions:
 
 achievements:
   amino:
-    - desc: "Migrated software development from CVS to Git including retention of complete version history allowing developers to take advantage of modern version control tool while retaining the ability to go back and understand the decisions behind code implementation."
-      skills_applied:
-      - Git
-      - CVS
     - desc: "Developed automatic build and release systems to assure the stability of the common code base, aligning build and release processes to avoid release time delays"
     - desc: "Migrated software development from CVS to Git including retention of complete version history allowing developers to take advantage of modern version control tool while retaining the ability to go back and understand the decisions behind code implementation."
-    - desc: "Developed automatic build and release systems to assure the stability of the common code base, aligning build and release processes to avoid release time delays"
-    - desc: "Developed and maintained Debian packages for toolchains and common development tools ensuring a consistent build environment "
+    - desc: "Developed and maintained Debian packages for toolchains and common development tools ensuring a consistent build environment"
     - desc: "Scrum Master and team lead for AmiNET firmware, and later AVG (Audio, Video and Graphics) teams; under which I also developed the companies first scrum tool using MySQL, perl, HTML and Javascript"
     - desc: "Platform ports Amino’s AmiNET Linux media streaming stack to ST 7105 and later Intel Berryville family of STBs"
     - desc: "As Amino acquired Entone, lead first cross-site team of Amino engineers developing for the Entone enable stack; successfully delivering Amino’s first MPEG Dash integration."
-    - desc: "For Amino acquisition of Booxmedia, led the first cross-site team of Amino engineers taking our existing skills in Linux, multimedia decode for consumer devices and re-apply in the the delivery of OTT CloudTV video services "
+    - desc: "After Amino acquisition of Booxmedia, led the first cross-site team of Amino engineers taking our existing skills in Linux, multimedia decode for consumer devices and re-apply in the the delivery of OTT CloudTV video services "
     - desc: "Delivered a complete set of demonstrator services used to support the sales team in winning opportunities; including developing the ground-breaking concept of using an Amino STB as the cable to IP turn-around acting as the content source for a complete live video and network PVR recording service. "
     - desc: "Working closing with our client through daily cross-company scrum stand-ups delivered Amino’s first end-to-end Service to screen multi-media video solution delivered through multiple DRM protected ABR formats (HLS, DASH, MSS). Including live streaming services (264 channel), recording services (50+ channels), radio channels, pause liveTV"
     - desc: "Acting as development support investigated and resolved production issues across the system ranging mobile applications (iOS, Android); HTML5 UI, Web Services (PHP, Yii), media backend (Python); deployment systems (Ansible, Docker), Networking issues (e.g. IGMP)"
@@ -122,29 +122,29 @@ achievements:
 
   ttpcom:
     - desc: "Used in-depth understanding of build tools, TTPCom's release system and Perforce to create a tool chain that brought patches and releases together in a single process and reduced fix delivery times from 1 month to less than 1 day"
-      hidden: 1
+#      hidden: 1
     - desc: "Aligned development and client software configurations eliminating time to debug mismatches"
-      hidden: 1
+#      hidden: 1
     - desc: "Co-ordinated with other departments to agree a branching and integration strategy allowing a wider range of options to be delivered to future clients"
-      hidden: 1
+#      hidden: 1
     - desc: "Wrote Perl scripts which analysed the build options applied to each software module in both development and client profiles pre-emptively identifying and resolving latent defects"
-      hidden: 1
+#      hidden: 1
     - desc: "Used SQL and Perl skills to write tool to export issue tracking history empowering clients to resolve common issues independently"
-      hidden: 1
+#      hidden: 1
     - desc: "Defined Support Processes for the Motorola WiMAX programme optimising communication with client engineers, while maintaining project control"
-      hidden: 1
+#      hidden: 1
     - desc: "Chaired software issue reviews with customers ensuring correct prioritisation, open communication and building customer confidence"
-      hidden: 1
+ #     hidden: 1
     - desc: "Led co-operation between not only organisation and client but also the network operator and equipment provider to complete resolution of issues"
       hidden: 1
     - desc: "Designed and implemented framework migrating TTPCom tracking data to Motorola's preferred solution reducing cost of maintaining multiple systems"
-      hidden: 1
+#      hidden: 1
     - desc: "Lead technical interface to strategic Asian customers successfully launching the companies first 3G handsets into Vodafone and O2"
       hidden: 1
     - desc: "Managed integration of TTPCom's MP3 and AMR solutions leading to successful launches"
       hidden: 1
     - desc: "Recruited test team leader, software and test engineers who became key to project success"
-      hidden: 1
+#      hidden: 1
     - desc: "Integrated AJAR (TTPCom's C++ Application Layer) onto new 3G chip-set overcoming platform, compiler and configuration issues"
       hidden: 1
     - desc: "Investigated and debugged protocol stack issues through 2G physical layer, RF, DSP, L1, AT interface, 3G protocol stack and up to application"
@@ -171,8 +171,10 @@ achievements:
 education:
 - desc: "Certified ScrumMaster (CSM)"
   date: 2015
-- desc: "PRINCE2"
+- desc: "PRINCE2 Practitioner"
   date: 2008
+- desc: "ISEB Practitioner in Software Testing"
+  date: 2003
 - desc: "MEng. (Hons) Electronic Engineering with Computer Science: 2-1"
   date: "1993 - 1998"
   additional_info: "University of Wales Swansea\n4-year masters course plus one gap year in Fachhochschule Mannheim"
