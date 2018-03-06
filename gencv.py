@@ -11,6 +11,13 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 
 import datetime
 
+
+output_options =  {
+    # Should company given titles be shown?
+    # For some applications it will be more suitable to define the role I was doing in the summary text, than the
+    # company given title
+    'show_position_titles': False
+}
 cvdb = {}
 
 with open("skills.yml", 'r') as stream:
@@ -111,7 +118,10 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
         p.paragraph_format.space_after = Pt(3)
 
         p.add_run(position['company_name']).bold = True
-        p.add_run("\t" + position['title'] + "\t")
+        if output_options['show_position_titles']:
+            p.add_run("\t" + position['title'] + "\t")
+        else:
+            p.add_run("\t\t")
         p.add_run(str(position['start']) + " - " + str(position['finish'])).bold = True
 
 
