@@ -6,7 +6,7 @@ from jinja2 import Environment, PackageLoader, select_autoescape
 import ruamel.yaml as yaml
 from docx import Document
 from docx.shared import Inches, Pt
-from docx.enum.text import WD_TAB_ALIGNMENT, WD_TAB_LEADER
+from docx.enum.text import WD_TAB_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 
 import datetime
@@ -69,8 +69,9 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
 
     document = Document()
 
-    for style in document.styles:
-        print "{} ({})".format(style.name, style.type)
+#   List known styles and types; useful for finding correct style name
+#    for style in document.styles:
+#        print "{} ({})".format(style.name, style.type)
 
     document.styles['Title'].paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
     document.styles['Title'].paragraph_format.space_after = Pt(3)
