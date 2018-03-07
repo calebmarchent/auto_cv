@@ -101,14 +101,20 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     table = document.add_table(rows=1, cols=len(processed_cvdb['skill_groups']))
     col = 0
 
-    # FIXME: Spurious line at start of cell
-    # Happens because there has to be cell contrent; there does not appear to be an API to replace the existing text
-    # with formatted text
+    # Populate table with skills, each cell will have a default paragraph generated automatically by the API, as not
+    # having one is invalid syntax; for the first paragraph we need to update where we 'add' for the other bullets
 
     for skill_group in processed_cvdb['skill_groups']:
+        idx = 0
         hdr_cells = table.columns[col].cells
         for skill in skill_group:
-            hdr_cells[0].add_paragraph(skill, style='ListBullet')
+            if idx == 0:
+                hdr_cells[0].paragraphs[0].style = document.styles['ListBullet']
+                hdr_cells[0].paragraphs[0].add_run(skill)
+            else:
+                hdr_cells[0].add_paragraph(skill, style='ListBullet')
+            idx += 1
+
         col += 1
 
     document.add_heading('Experience', level=2)
