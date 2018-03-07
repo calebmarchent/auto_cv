@@ -20,7 +20,7 @@ output_options =  {
 }
 cvdb = {}
 
-with open("skills.yml", 'r') as stream:
+with open("cvdb.yml", 'r') as stream:
     try:
         cvdb = yaml.load(stream, Loader=yaml.Loader)
     except yaml.YAMLError as exc:
