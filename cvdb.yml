@@ -5,6 +5,32 @@ elevator_pitch:
  - "Software Engineer with 20 years experience, predominantly as a hands-on developer leading teams of highly skilled engineers to deliver products using whatever technology is required. Seeks another hands-on technical role, working closely in a team with other engineers to successfully deliver products that satisfy customers."
  - "Holds a rare combination of talents; a broad knowledge of the development, production and support of software, the ability to write code, script systems and use tools while at the same time - create, mentor and manage teams that can do this on a larger scale. Grace under pressure while dealing with demanding customers from around the world and delivering on tight deadlines."
 
+skills:
+- name: Agile
+- name: JIRA
+- name: Docker
+- name: Vagrant
+- name: Ansible
+- name: Jenkins
+  categories:
+  - "Continuous Integration"
+  - "Build Automation"
+- name: Git
+  categories:
+  - "Version Control"
+  - "Software Configuration Management"
+- name: Zabbix
+- name: Linux Software Development
+- name: Debian Administration and Package Development
+- name: Autotools
+- name: Bash
+  categories:
+  - "Shell Scripting"
+- name: Scrum
+  categories:
+  - Agile
+- name:
+
 skill_groups:
 -
   - "Agile:\nCertified Scrum Master"
