@@ -40,6 +40,7 @@ for grp in cvdb['skill_groups']:
 
 processed_cvdb['positions'] = cvdb['positions']
 processed_cvdb['elevator_pitch'] = cvdb['elevator_pitch']
+processed_cvdb['further_information'] = cvdb['further_information']
 
 processed_cvdb['achievements'] = {}
 for position, position_achievements in cvdb['achievements'].iteritems():
@@ -89,7 +90,7 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     p.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
 #    p.style.font.size = Pt(8)
 
-    document.add_heading('Summary', level=2)
+    document.add_heading('Profile', level=2)
 
     for para in processed_cvdb['elevator_pitch']:
         p = document.add_paragraph(para)
@@ -153,13 +154,9 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
             p.add_run("\n{}".format(experience['additional_info']))
 
     document.add_heading('Further Information', level=2)
-    p = document.add_paragraph('Spoken Foreign Languages: German, Polish')
-    p.paragraph_format.space_after = Pt(0)
-    p = document.add_paragraph('Interests: Mountain Biking (competed 3 times in annual Dusk-til-Dawn 8pm - 8am' +
-                               ' endurance race.)')
-    p.paragraph_format.space_after = Pt(0)
 
-    p = document.add_paragraph('Full, clean driving licence and current passport, comfortable with travel for work purposes')
-    p.paragraph_format.space_after = Pt(0)
+    for line in processed_cvdb['further_information']:
+        p = document.add_paragraph(line)
+        p.paragraph_format.space_after = Pt(0)
 
     document.save('curriculum_vitae.docx')
