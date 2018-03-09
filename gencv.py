@@ -8,6 +8,7 @@ from docx import Document
 from docx.shared import Inches, Pt
 from docx.enum.text import WD_TAB_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.enum.style import WD_STYLE_TYPE
 
 import datetime
 
@@ -71,12 +72,16 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     document = Document()
 
 #   List known styles and types; useful for finding correct style name
-#    for style in document.styles:
-#        print "{} ({})".format(style.name, style.type)
+    for style in document.styles:
+        print "{} ({})".format(style.name, style.type)
 
     document.styles['Title'].paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
     document.styles['Title'].paragraph_format.space_after = Pt(3)
     document.styles['Normal'].font.size = Pt(10)
+
+    s = document.styles.add_style('skills_bullet', WD_STYLE_TYPE.PARAGRAPH )
+    s.base_style = document.styles['ListBullet']
+    s.font.size = Pt(11)
 
     # Configure the document properties:
     document.core_properties.title = "Caleb Marchent"
@@ -111,10 +116,10 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
         hdr_cells = table.columns[col].cells
         for skill in skill_group:
             if idx == 0:
-                hdr_cells[0].paragraphs[0].style = document.styles['ListBullet']
+                hdr_cells[0].paragraphs[0].style = document.styles['skills_bullet']
                 hdr_cells[0].paragraphs[0].add_run(skill)
             else:
-                hdr_cells[0].add_paragraph(skill, style='ListBullet')
+                hdr_cells[0].add_paragraph(skill, style='skills_bullet')
             idx += 1
 
         col += 1
