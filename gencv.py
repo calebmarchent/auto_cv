@@ -138,9 +138,17 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
         for skill in skill_group:
             if idx == 0:
                 hdr_cells[0].paragraphs[0].style = styles['skills_bullet']
-                hdr_cells[0].paragraphs[0].add_run(skill)
+                p = hdr_cells[0].paragraphs[0]
             else:
-                hdr_cells[0].add_paragraph(skill, style='skills_bullet')
+                p = hdr_cells[0].add_paragraph('', style='skills_bullet')
+
+            # Look for embolden sections and split run to illuminate the text between them
+            # FIXME: The code below alternates boldness on each occurance of *, while it would work for now,
+            # it is not extensible to handle other formatting charaters.
+            b = False
+            for run in skill.split('*'):
+                p.add_run(run).bold = b
+                b = not b
             idx += 1
 
         col += 1

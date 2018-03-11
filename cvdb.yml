@@ -33,27 +33,26 @@ skills:
 
 skill_groups:
 -
-  - "Agile:\nCertified Scrum Master"
-  - "Bug Tracking:\nJIRA, Bugzilla"
-  - "Continuous Integration: Jenkins"
-  - "Build:\nBuildroot, GNU Make, Autotools"
-  - "Version Control:\nGit, SVN, CVS, Peforce"
+  - "*Agile:* Certified Scrum Master"
+  - "*Bug Tracking:* JIRA, Bugzilla"
+  - "*Continuous Integration:* Jenkins"
+  - "*Build:* Buildroot, GNU Make, Autotools"
+  - "*Version Control:* Git, SVN, CVS, Peforce"
 #  - "Zabbix service monitoring"
 #  - "Cloud Tools:\nDocker, Vagrant, Ansible"
 -
-  - "Script Development:\nBash, Perl, Python"
-  - "Programming:\nC, C++"
-  - "SQL"
-  - "Linux Development for both consumer device and servers"
-  - "Debian Administration and Package Development"
+  - "*Script Development:* Bash, Perl, Python"
+  - "*Programming:* C, C++, SQL"
+  - "*Linux Development* for both consumer device and servers"
+  - "*Debian* Administration and Package Development"
 -
-  - "Line Management:\nApproach tailored to individual"
-  - "Recruiting and Building Teams"
-  - "Mentoring, Goal Setting, tracking"
-  - "Software Change and Configuration Management"
+  - "*Line Management* approach tailored to individual"
+  - "*Recruiting,* Building Teams"
+  - "*Mentoring,* Goal Setting & Performance Tracking"
+  - "*Software Change* & Configuration Management"
 #  - "Automates repetitive tasks"
 #  - "Completer Finisher"
-  - "Leads with collaboration and clear vision"
+  - "*Collaborative*, clear vision"
 
 
 positions:
