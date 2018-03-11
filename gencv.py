@@ -13,7 +13,7 @@ from docx.enum.style import WD_STYLE_TYPE
 import datetime
 
 
-output_options =  {
+output_options = {
     # Should company given titles be shown?
     # For some applications it will be more suitable to define the role I was doing in the summary text, than the
     # company given title
@@ -28,7 +28,7 @@ with open("cvdb.yml", 'r') as stream:
         print(exc)
 
 # Process the imported YAML; creating the structure required for the document from the source database
-processed_cvdb = {}
+processed_cvdb = dict()
 processed_cvdb['skill_groups'] = list()
 row = 0
 for grp in cvdb['skill_groups']:
@@ -52,7 +52,7 @@ for position, position_achievements in cvdb['achievements'].iteritems():
 
 processed_cvdb['education'] = cvdb['education']
 
-OUTPUT_DOCUMENT_TYPE = "word" # or "html"
+OUTPUT_DOCUMENT_TYPE = "word"  # or "html"
 
 if OUTPUT_DOCUMENT_TYPE == "html":
 
@@ -88,11 +88,11 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     styles['Title'].paragraph_format.space_after = Pt(3)
     styles['Normal'].font.size = Pt(10)
 
-    s = styles.add_style('skills_bullet', WD_STYLE_TYPE.PARAGRAPH )
+    s = styles.add_style('skills_bullet', WD_STYLE_TYPE.PARAGRAPH)
     s.base_style = styles['List Bullet']
     s.font.size = Pt(10)
 
-    s = styles.add_style('achievement_bullet', WD_STYLE_TYPE.PARAGRAPH )
+    s = styles.add_style('achievement_bullet', WD_STYLE_TYPE.PARAGRAPH)
     s.base_style = styles['List Bullet']
     s.font.size = Pt(10)
 
@@ -109,11 +109,13 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     document.core_properties.title = "Caleb Marchent"
     document.core_properties.author = "Caleb Marchent - Curriculum Vitae"
     document.core_properties.created = datetime.datetime.now()
-    document.core_properties.comments = "Generated Automatically\nSource code available at:\nhttps://github.com/calebmarchent/auto_cv.git"
+    document.core_properties.comments = "Generated Automatically\nSource code available at:\n" + \
+                                        "https://github.com/calebmarchent/auto_cv.git"
 
     document.add_heading('Caleb Marchent', 0)
 
-    p = document.add_paragraph('9 Goldfinch Drive, Cottenham, Cambridge, CB24 8XY | 07803 296105 | caleb.marchent@iee.org',
+    p = document.add_paragraph('9 Goldfinch Drive, Cottenham, Cambridge, CB24 8XY' +
+                               '| 07803 296105 | caleb.marchent@iee.org',
                                style='contact_info')
 
     document.add_heading('Profile', level=2)
@@ -165,7 +167,6 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
         else:
             p.add_run("\t\t")
         p.add_run(str(position['start']) + " - " + str(position['finish'])).bold = True
-
 
         p.paragraph_format.tab_stops.add_tab_stop(Inches(3), WD_TAB_ALIGNMENT.CENTER)
         p.paragraph_format.tab_stops.add_tab_stop(Inches(6), WD_TAB_ALIGNMENT.RIGHT)
