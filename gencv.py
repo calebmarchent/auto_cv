@@ -87,6 +87,9 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     s.base_style = document.styles['ListBullet']
     s.font.size = Pt(9)
 
+    s = document.styles.add_style('company_summary', WD_STYLE_TYPE.PARAGRAPH)
+    s.base_style = document.styles['Normal']
+    s.font.italic = True
 
     # Configure the document properties:
     document.core_properties.title = "Caleb Marchent"
@@ -146,7 +149,7 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
         p.paragraph_format.tab_stops.add_tab_stop(Inches(6), WD_TAB_ALIGNMENT.RIGHT)
 
         if 'company_summary' in position:
-            document.add_paragraph(position['company_summary'])
+            document.add_paragraph(position['company_summary'], style='company_summary')
 
         for achievement in processed_cvdb['achievements'][position['brief']]:
             p = document.add_paragraph(achievement['desc'], style='achievement_bullet')
