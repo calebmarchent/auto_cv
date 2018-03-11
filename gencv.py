@@ -96,6 +96,11 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     s.base_style = document.styles['Normal']
     s.font.italic = True
 
+    s = document.styles.add_style('contact_info', WD_STYLE_TYPE.PARAGRAPH)
+    s.base_style = document.styles['Normal']
+    s.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    s.font.size = Pt(9)
+
     # Configure the document properties:
     document.core_properties.title = "Caleb Marchent"
     document.core_properties.author = "Caleb Marchent - Curriculum Vitae"
@@ -104,8 +109,8 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
 
     document.add_heading('Caleb Marchent', 0)
 
-    p = document.add_paragraph('9 Goldfinch Drive, Cottenham, Cambridge, CB24 8XY | 07803 296105 | caleb.marchent@iee.org')
-    p.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p = document.add_paragraph('9 Goldfinch Drive, Cottenham, Cambridge, CB24 8XY | 07803 296105 | caleb.marchent@iee.org',
+                               style='contact_info')
 
     document.add_heading('Profile', level=2)
 
