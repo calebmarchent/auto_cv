@@ -5,7 +5,7 @@ CV Generator
 from jinja2 import Environment, PackageLoader, select_autoescape
 import ruamel.yaml as yaml
 from docx import Document
-from docx.shared import Inches, Pt
+from docx.shared import Inches, Pt, Mm
 from docx.enum.text import WD_TAB_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.style import WD_STYLE_TYPE
@@ -79,6 +79,8 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
         section.right_margin = Inches(0.75)
         section.top_margin = Inches(1)
         section.bottom_margin = Inches(1)
+        section.page_height = Mm(297)
+        section.page_width = Mm(210)
 
     styles = document.styles
 
