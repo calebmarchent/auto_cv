@@ -72,8 +72,13 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     document = Document()
 
 #   List known styles and types; useful for finding correct style name
-    for style in document.styles:
-        print "{} ({})".format(style.name, style.type)
+    # for style in document.styles: print "{} ({})".format(style.name, style.type)
+
+    for section in document.sections:
+        section.left_margin = Inches(0.75)
+        section.right_margin = Inches(0.75)
+        section.top_margin = Inches(1)
+        section.bottom_margin = Inches(1)
 
     document.styles['Title'].paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
     document.styles['Title'].paragraph_format.space_after = Pt(3)
@@ -81,11 +86,11 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
 
     s = document.styles.add_style('skills_bullet', WD_STYLE_TYPE.PARAGRAPH )
     s.base_style = document.styles['ListBullet']
-    s.font.size = Pt(11)
+    s.font.size = Pt(10)
 
     s = document.styles.add_style('achievement_bullet', WD_STYLE_TYPE.PARAGRAPH )
     s.base_style = document.styles['ListBullet']
-    s.font.size = Pt(9)
+    s.font.size = Pt(10)
 
     s = document.styles.add_style('company_summary', WD_STYLE_TYPE.PARAGRAPH)
     s.base_style = document.styles['Normal']
