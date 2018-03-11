@@ -100,80 +100,80 @@ achievements:
     - desc: "Developed the company's first Scrum tool using MySQL, perl, HTML and Javascript, automatically synchronised with TestTrack Bug-Tracker allowing consistent prioritised backlogs for each team and reducing administrative burden"
     - desc: "Platform ports Amino’s AmiNET Linux media streaming stack to ST 7105 and later Intel Berryville family of STBs"
     - desc: "As Amino acquired Entone, led first cross-site team of Amino engineers developing for the Entone enable stack; successfully delivering Amino’s first MPEG Dash integration."
-      tags: ['base']
+      tags: []
     - desc: "After Amino acquisition of Booxmedia, led the first cross-site team of Amino engineers taking our existing skills in Linux, multimedia decode for consumer devices and re-apply in the the delivery of OTT CloudTV video services "
     - desc: "Delivered a complete set of demonstrator services used to support the sales team in winning opportunities; including developing the ground-breaking concept of using an Amino STB as the cable to IP turn-around acting as the content source for a complete live video and network PVR recording service. "
-      tags: ['base']
+      tags: []
     - desc: "Working closing with our client through daily cross-company scrum stand-ups delivered Amino’s first end-to-end Service to screen multi-media video solution delivered through multiple DRM protected ABR formats (HLS, DASH, MSS). Including live streaming services (264 channel), recording services (50+ channels), radio channels, pause liveTV"
     - desc: "Investigated and resolved production issues across the system ranging mobile applications (iOS, Android); HTML5 UI, Web Services (PHP, Yii), media backend (Python); deployment systems (Ansible, Docker), Networking issues (e.g. IGMP)"
 
   global_graphics:
     - desc: "Planned iteration and release content with input from project team, product management, quality assurance and support"
-      tags: ['base']
+      tags: []
     - desc: "Co-ordinated activities associated with software configuration management and delivered high-quality releases to agreed plans"
-      tags: ['base']
+      tags: []
     - desc: "First action on joining team was to initiate daily regression tests to eliminate associated delays in development and QA"
-      tags: ['base']
+      tags: []
     - desc: "Formulated framework for developer tests, using QT’s built-in javascript technology. Used to implement tests during module development which were then built into a suite for avoiding regressions in subsequent iterations"
-      tags: ['base']
+      tags: []
     - desc: "Defined change request tracking processes and then evolved it throughout the project to support team’s constant process improvement"
-      tags: ['base']
+      tags: []
     - desc: "Scripted automated import processes for 3rd party modules, using Perl and Perforce, which improved consistency and minimised required effort for the regular import cycles"
-      tags: ['base']
+      tags: []
     - desc: "Extended VB skills to Lotus Script, then used to migrate product backlogs into a combined database simplifying cross-team request tracking, progress reporting and removing significant administrative overhead"
-      tags: ['base']
+      tags: []
     - desc: "Acted as Scrum Master for the first Global Graphics project to use Agile methods, adapting and advancing existing traditional processes and tools to expedite a rapid transition while minimising the impact of the change on team productivity"
-      tags: ['base']
+      tags: []
     - desc: "Investigated bugs prioritising and channelling to correct team for resolution"
-      tags: ['base']
+      tags: []
 
   ttpcom:
     - desc: "Used in-depth understanding of build tools, TTPCom's release system and Perforce to create a tool chain that brought patches and releases together in a single process and reduced fix delivery times from 1 month to less than 1 day"
-#      tags: ['base']
+      tags: ['base']
     - desc: "Aligned development and client software configurations eliminating time to debug mismatches"
-#      tags: ['base']
+      tags: ['base']
     - desc: "Co-ordinated with other departments to agree a branching and integration strategy allowing a wider range of options to be delivered to future clients"
       tags: ['base']
     - desc: "Wrote Perl scripts which analysed the build options applied to each software module in both development and client profiles pre-emptively identifying and resolving latent defects"
-#      tags: ['base']
+      tags: ['base']
     - desc: "Used SQL and Perl skills to write tool to export issue tracking history empowering clients to resolve common issues independently"
-#      tags: ['base']
+      tags: ['base']
     - desc: "Defined Support Processes for the Motorola WiMAX programme optimising communication with client engineers, while maintaining project control"
-#      tags: ['base']
+      tags: ['base']
     - desc: "Chaired software issue reviews with customers ensuring correct prioritisation, open communication and building customer confidence"
-      tags: ['base']
+      tags: []
     - desc: "Led co-operation between not only organisation and client but also the network operator and equipment provider to complete resolution of issues"
-      tags: ['base']
+      tags: []
     - desc: "Designed and implemented framework migrating TTPCom tracking data to Motorola's preferred solution reducing cost of maintaining multiple systems"
-      tags: ['base']
+      tags: []
     - desc: "Lead technical interface to strategic Asian customers successfully launching the companies first 3G handsets into Vodafone and O2"
-      tags: ['base']
-#    - desc: "Managed integration of TTPCom's MP3 and AMR solutions leading to successful launches"
-#      tags: ['base']
+      tags: []
+    - desc: "Managed integration of TTPCom's MP3 and AMR solutions leading to successful launches"
+      tags: []
     - desc: "Recruited test team leader, software and test engineers who became key to project success"
-#      tags: ['base']
+      tags: ['base']
     - desc: "Integrated AJAR (TTPCom's C++ Application Layer) onto new 3G chip-set overcoming platform, compiler and configuration issues"
-      tags: ['base']
+      tags: []
     - desc: "Investigated and debugged protocol stack issues through 2G physical layer, RF, DSP, L1, AT interface, 3G protocol stack and up to application"
-      tags: ['base']
+      tags: []
 
   pace:
     - desc: "Negotiated and managed to budget a $1M supplier contract for development of software testing suite, a vital tool to build the long-term quality of Pace's MSTV product line"
-      tags: ['base']
+      tags: []
     - desc: "Organised, chaired and provided technical input to software design and code reviews"
-      tags: ['base']
+      tags: []
     - desc: "Designed and executed manual and automated system tests for Embedded Linux set-top-boxes"
-      tags: ['base']
+      tags: []
     - desc: "Created systems for reporting bug status into project leadership teams"
-      tags: ['base']
+      tags: []
 
   philips:
     - desc: "Developed windows software for the configuration of and programming parameters of a pager"
-      tags: ['base']
+      tags: []
     - desc: "Designed, coded, debugged and maintained the Clock, IR and Configuration Manager components of a 2-way pager."
-      tags: ['base']
+      tags: []
     - desc: "Independently wrote automated test harness software, controlling the hardware inputs and monitoring chip outputs."
-      tags: ['base']
+      tags: []
 
 education:
 - desc: "Certified ScrumMaster (CSM)"

@@ -47,7 +47,7 @@ processed_cvdb['achievements'] = {}
 for position, position_achievements in cvdb['achievements'].iteritems():
     processed_cvdb['achievements'][position] = list()
     for achievement in position_achievements:
-        if 'hidden' not in achievement:
+        if ('tags' not in achievement) or ('base' in achievement['tags']):
             processed_cvdb['achievements'][position].append(achievement)
 
 processed_cvdb['education'] = cvdb['education']
