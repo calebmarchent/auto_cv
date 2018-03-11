@@ -83,6 +83,11 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     s.base_style = document.styles['ListBullet']
     s.font.size = Pt(11)
 
+    s = document.styles.add_style('achievement_bullet', WD_STYLE_TYPE.PARAGRAPH )
+    s.base_style = document.styles['ListBullet']
+    s.font.size = Pt(9)
+
+
     # Configure the document properties:
     document.core_properties.title = "Caleb Marchent"
     document.core_properties.author = "Caleb Marchent - Curriculum Vitae"
@@ -93,7 +98,6 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
 
     p = document.add_paragraph('9 Goldfinch Drive, Cottenham, Cambridge, CB24 8XY | 07803 296105 | caleb.marchent@iee.org')
     p.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
-#    p.style.font.size = Pt(8)
 
     document.add_heading('Profile', level=2)
 
@@ -145,8 +149,8 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
             document.add_paragraph(position['company_summary'])
 
         for achievement in processed_cvdb['achievements'][position['brief']]:
-            p = document.add_paragraph(achievement['desc'], style='ListBullet')
-            p.style.font.size = Pt(9)
+            p = document.add_paragraph(achievement['desc'], style='achievement_bullet')
+            # p.style.font.size = Pt(10)
 
     document.add_heading('Education', level=2)
 
