@@ -80,24 +80,26 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
         section.top_margin = Inches(1)
         section.bottom_margin = Inches(1)
 
-    document.styles['Title'].paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    document.styles['Title'].paragraph_format.space_after = Pt(3)
-    document.styles['Normal'].font.size = Pt(10)
+    styles = document.styles
 
-    s = document.styles.add_style('skills_bullet', WD_STYLE_TYPE.PARAGRAPH )
-    s.base_style = document.styles['ListBullet']
+    styles['Title'].paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    styles['Title'].paragraph_format.space_after = Pt(3)
+    styles['Normal'].font.size = Pt(10)
+
+    s = styles.add_style('skills_bullet', WD_STYLE_TYPE.PARAGRAPH )
+    s.base_style = styles['List Bullet']
     s.font.size = Pt(10)
 
-    s = document.styles.add_style('achievement_bullet', WD_STYLE_TYPE.PARAGRAPH )
-    s.base_style = document.styles['ListBullet']
+    s = styles.add_style('achievement_bullet', WD_STYLE_TYPE.PARAGRAPH )
+    s.base_style = styles['List Bullet']
     s.font.size = Pt(10)
 
-    s = document.styles.add_style('company_summary', WD_STYLE_TYPE.PARAGRAPH)
-    s.base_style = document.styles['Normal']
+    s = styles.add_style('company_summary', WD_STYLE_TYPE.PARAGRAPH)
+    s.base_style = styles['Normal']
     s.font.italic = True
 
-    s = document.styles.add_style('contact_info', WD_STYLE_TYPE.PARAGRAPH)
-    s.base_style = document.styles['Normal']
+    s = styles.add_style('contact_info', WD_STYLE_TYPE.PARAGRAPH)
+    s.base_style = styles['Normal']
     s.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
     s.font.size = Pt(9)
 
@@ -133,7 +135,7 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
         hdr_cells = table.columns[col].cells
         for skill in skill_group:
             if idx == 0:
-                hdr_cells[0].paragraphs[0].style = document.styles['skills_bullet']
+                hdr_cells[0].paragraphs[0].style = styles['skills_bullet']
                 hdr_cells[0].paragraphs[0].add_run(skill)
             else:
                 hdr_cells[0].add_paragraph(skill, style='skills_bullet')
@@ -163,7 +165,6 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
 
         for achievement in processed_cvdb['achievements'][position['brief']]:
             p = document.add_paragraph(achievement['desc'], style='achievement_bullet')
-            # p.style.font.size = Pt(10)
 
     document.add_heading('Education', level=2)
 
