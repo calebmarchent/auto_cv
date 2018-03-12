@@ -12,12 +12,12 @@ from docx.enum.style import WD_STYLE_TYPE
 
 import datetime
 
-
 output_options = {
     # Should company given titles be shown?
     # For some applications it will be more suitable to define the role I was doing in the summary text, than the
     # company given title
-    'show_position_titles': False
+    'show_position_titles': False,
+    'show_skill_headings': False
 }
 cvdb = {}
 
@@ -32,10 +32,11 @@ processed_cvdb = dict()
 processed_cvdb['skill_groups'] = list()
 row = 0
 for grp in cvdb['skill_groups']:
-    processed_cvdb['skill_groups'].append(list())
-    for skill in grp:
-        if 'hidden' not in cvdb['skill_groups']:
-            processed_cvdb['skill_groups'][row].append(skill)
+    d = dict([('heading', grp['heading']), ('items', grp['items'])])
+    processed_cvdb['skill_groups'].append(d)
+#    for skill in grp['items']:
+#        if 'hidden' not in cvdb['skill_groups']:
+#            processed_cvdb['skill_groups'][row]['items'].append(skill)
     row += 1
 
 
@@ -126,23 +127,26 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     document.add_heading('Key Skills', level=2)
 
     # Find the maximum number of skills in a group
-    rows = max(len(skill_group) for skill_group in processed_cvdb['skill_groups'])
-
-    table = document.add_table(rows=1, cols=len(processed_cvdb['skill_groups']))
+    table = document.add_table(rows=(2 if output_options['show_skill_headings'] else 1),
+                               cols=len(processed_cvdb['skill_groups']))
     col = 0
 
     # Populate table with skills, each cell will have a default paragraph generated automatically by the API, as not
     # having one is invalid syntax; for the first paragraph we need to update where we 'add' for the other bullets
 
     for skill_group in processed_cvdb['skill_groups']:
+        row = 0
         idx = 0
         hdr_cells = table.columns[col].cells
-        for skill in skill_group:
+        if output_options['show_skill_headings']:
+            hdr_cells[row].paragraphs[0].add_run(skill_group['heading']).bold = True
+            row += 1
+        for skill in skill_group['items']:
             if idx == 0:
-                hdr_cells[0].paragraphs[0].style = styles['skills_bullet']
-                p = hdr_cells[0].paragraphs[0]
+                hdr_cells[row].paragraphs[0].style = styles['skills_bullet']
+                p = hdr_cells[row].paragraphs[0]
             else:
-                p = hdr_cells[0].add_paragraph('', style='skills_bullet')
+                p = hdr_cells[row].add_paragraph('', style='skills_bullet')
 
             # Look for embolden sections and split run to illuminate the text between them
             # FIXME: The code below alternates boldness on each occurance of *, while it would work for now,

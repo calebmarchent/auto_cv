@@ -32,7 +32,8 @@ skills:
 - name:
 
 skill_groups:
--
+- heading: "Technical"
+  items:
   - "*Agile:* Certified Scrum Master"
   - "*Bug Tracking:* JIRA, Bugzilla"
   - "*Continuous Integration:* Jenkins"
@@ -40,12 +41,14 @@ skill_groups:
   - "*Version Control:* Git, SVN, CVS, Peforce"
 #  - "Zabbix service monitoring"
 #  - "Cloud Tools:\nDocker, Vagrant, Ansible"
--
+- heading: "Tools"
+  items:
   - "*Script Development:* Bash, Perl, Python"
   - "*Programming:* C, C++, SQL"
   - "*Linux Development* for both consumer device and servers"
   - "*Debian* Administration and Package Development"
--
+- heading: "Leadership"
+  items:
   - "*Line Management* approach tailored to individual"
   - "*Recruiting,* Building Teams"
   - "*Mentoring,* Goal Setting & Performance Tracking"
