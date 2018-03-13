@@ -99,19 +99,33 @@ positions:
 
 achievements:
   amino:
-    - desc: "Developed automatic build and release systems to assure the stability of the common code base, aligning build and release processes to eliminating release day delays due to broken configuration"
-    - desc: "Migrated software development from CVS to Git including retention of complete version history allowing developers to take advantage of modern version control tool while retaining the ability to go back and understand the decisions behind code implementation."
-    - desc: "Developed and maintained Debian packages for toolchains and common development tools ensuring a consistent build environment and hence reducing developer time tracking down machine specific bugs"
-    - desc: "Ensured developer communication, regular knowledge sharing as Scrum Master and team lead for AmiNET firmware, and later AVG (Audio, Video and Graphics) teams"
-    - desc: "Developed the company's first Scrum tool using MySQL, perl, HTML and Javascript, automatically synchronised with TestTrack Bug-Tracker allowing consistent prioritised backlogs for each team and reducing administrative burden"
+    - desc: "Developed automatic build and release systems to assure the stability of the common code base, aligning
+             build and release processes to eliminating release day delays due to broken configuration"
+    - desc: "Migrated software development from CVS to Git including retention of complete version history allowing
+             developers to take advantage of modern version control tool while retaining the ability to go back and
+             understand the decisions behind code implementation."
+    - desc: "Developed and maintained Debian packages for toolchains and common development tools ensuring a consistent
+             build environment and hence reducing developer time tracking down machine specific bugs"
+    - desc: "Ensured developer communication, regular knowledge sharing as Scrum Master and team lead for AmiNET firmware,
+             and later AVG (Audio, Video and Graphics) teams"
+    - desc: "Developed the company's first Scrum tool using MySQL, perl, HTML and Javascript, automatically synchronised
+             with TestTrack Bug-Tracker allowing consistent prioritised backlogs for each team and reducing administrative burden"
     - desc: "Platform ports Amino’s AmiNET Linux media streaming stack to ST 7105 and later Intel Berryville family of STBs"
-    - desc: "As Amino acquired Entone, led first cross-site team of Amino engineers developing for the Entone enable stack; successfully delivering Amino’s first MPEG Dash integration."
+    - desc: "As Amino acquired Entone, led first cross-site team of Amino engineers developing for the Entone enable
+             stack; successfully delivering Amino’s first MPEG Dash integration."
       tags: []
-    - desc: "After Amino acquisition of Booxmedia, led the first cross-site team of Amino engineers taking our existing skills in Linux, multimedia decode for consumer devices and re-apply in the the delivery of OTT CloudTV video services "
-    - desc: "Delivered a complete set of demonstrator services used to support the sales team in winning opportunities; including developing the ground-breaking concept of using an Amino STB as the cable to IP turn-around acting as the content source for a complete live video and network PVR recording service. "
+    - desc: "After Amino acquisition of Booxmedia, led the first cross-site team of Amino engineers taking our existing
+             skills in Linux, multimedia decode for consumer devices and re-apply in the the delivery of OTT CloudTV video services "
+    - desc: "Delivered a complete set of demonstrator services used to support the sales team in winning opportunities;
+             including developing the ground-breaking concept of using an Amino STB as the cable to IP turn-around acting
+             as the content source for a complete live video and network PVR recording service. "
       tags: []
-    - desc: "Working closing with our client through daily cross-company scrum stand-ups delivered Amino’s first end-to-end Service to screen multi-media video solution delivered through multiple DRM protected ABR formats (HLS, DASH, MSS). Including live streaming services (264 channel), recording services (50+ channels), radio channels, pause liveTV"
-    - desc: "Investigated and resolved production issues across the system ranging mobile applications (iOS, Android); HTML5 UI, Web Services (PHP, Yii), media backend (Python); deployment systems (Ansible, Docker), Networking issues (e.g. IGMP)"
+    - desc: "Working closing with our client through daily cross-company scrum stand-ups delivered Amino’s first end-to-end
+             Service to screen multi-media video solution delivered through multiple DRM protected ABR formats (HLS, DASH, MSS).
+             Including live streaming services (264 channel), recording services (50+ channels), radio channels, pause liveTV"
+    - desc: "Investigated and resolved production issues across the system ranging mobile applications (iOS, Android);
+             HTML5 UI, Web Services (PHP, Yii), media backend (Python); deployment systems (Ansible, Docker), Networking
+             issues (e.g. IGMP)"
 
   global_graphics:
     - desc: "Planned iteration and release content with input from project team, product management, quality assurance and support"
