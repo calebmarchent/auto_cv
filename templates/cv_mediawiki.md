@@ -19,15 +19,14 @@ Experience
 <tr><td>{{ position.company_name }}<td class="role_title">{{ position.title }}<td class="date">{{ position.start }} - {{ position.finish }}</td>
 </table>
 {% if position.company_summary is defined %}
-<p>{{ position.company_summary }}</p>
+{{ position.company_summary }}
 {% endif %}
 {% set achievements_here = achievements[position.brief] %}
-<ul>
 {% for achievement in achievements_here %}
-    <li>{{ achievement.desc }}</li>
+* {{ achievement.desc }}
 {% endfor %}
-</ul>
 {% endfor %}
+
 Education
 --
 {% for experience in education %}
