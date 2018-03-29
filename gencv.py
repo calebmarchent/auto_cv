@@ -115,7 +115,7 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
 
     document.add_heading('Caleb Marchent', 0)
 
-    p = document.add_paragraph('120 High Street, Landbeach, Cambridge, CB25 8FU' +
+    p = document.add_paragraph('120 High Street, Landbeach, Cambridge, CB25 8FU ' +
                                '| 07803 296105 | caleb.marchent@iee.org',
                                style='contact_info')
 
