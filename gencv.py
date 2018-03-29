@@ -55,12 +55,20 @@ processed_cvdb['education'] = cvdb['education']
 
 OUTPUT_DOCUMENT_TYPE = "word"  # or "html"
 
+env = Environment(
+    loader=PackageLoader('gencv', 'templates'),
+    autoescape=select_autoescape(['html', 'rtf'])
+)
+
+# Update the media wiki version of the document
+template = env.get_template('cv_mediawiki.md')
+
+# to save the results
+with open("curriculum_vitae.md", "wb") as fh:
+    fh.write(template.render(processed_cvdb).encode('utf-8'))
+
 if OUTPUT_DOCUMENT_TYPE == "html":
 
-    env = Environment(
-        loader=PackageLoader('gencv', 'templates'),
-        autoescape=select_autoescape(['html', 'rtf'])
-    )
 
     template = env.get_template('legacy_cv.html')
 
