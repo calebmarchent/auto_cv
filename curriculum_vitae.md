@@ -14,10 +14,11 @@ Key Skills
 Experience
 --
 
-<hr>
-<table>
+
+<table border="0">
 <tr><td>Amino Communications<td class="role_title">Software Development Manager<td class="date">2010 - 2018</td>
 </table>
+
 
 Linux software development for media-streaming devices (STBs) and services. Hired to fill two roles: Scrum Master for the Platform team and "toolsmith" developing toolchains, release systems and developer tools to ensure developer productivity
 
@@ -42,20 +43,22 @@ Linux software development for media-streaming devices (STBs) and services. Hire
 * Investigated and resolved production issues across the system ranging mobile applications (iOS, Android); HTML5 UI, Web Services (PHP, Yii), media backend (Python); deployment systems (Ansible, Docker), Networking issues (e.g. IGMP)
 
 
-<hr>
-<table>
+
+<table border="0">
 <tr><td>Global Graphics<td class="role_title">Software Release Coordinator<td class="date">2008 - 2010</td>
 </table>
+
 
 Electronic document software; Managed team to deliver PDF workflow software for Windows
 
 
 
 
-<hr>
-<table>
+
+<table border="0">
 <tr><td>TTPCom<td class="role_title">Staff Senior Software Engineer<td class="date">2003 - 2008</td>
 </table>
+
 
 Mobile Telecommunications; GSM, GPRS and the first Intel-based 3G handset. Appointed to provide dedicated engineering support for integration to customers using TTPCom mobile stack. Later moved on to run teams and then then run the support team
 
@@ -76,20 +79,22 @@ Mobile Telecommunications; GSM, GPRS and the first Intel-based 3G handset. Appoi
 * Recruited test team leader, software and test engineers who became key to project success
 
 
-<hr>
-<table>
+
+<table border="0">
 <tr><td>Pace Micro Technology<td class="role_title">Software Quality Assurance Engineer<td class="date">2000 - 2003</td>
 </table>
+
 
 Automated test system development, including C based API validation
 
 
 
 
-<hr>
-<table>
+
+<table border="0">
 <tr><td>Philips Communications<td class="role_title">Software Engineer<td class="date">1998 - 2000</td>
 </table>
+
 
 Embedded Software Development for Pagers
 

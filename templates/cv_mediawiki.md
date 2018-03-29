@@ -14,10 +14,11 @@ Key Skills
 Experience
 --
 {% for position in positions %}
-<hr>
-<table>
+
+<table border="0">
 <tr><td>{{ position.company_name }}<td class="role_title">{{ position.title }}<td class="date">{{ position.start }} - {{ position.finish }}</td>
 </table>
+
 {% if position.company_summary is defined %}
 {{ position.company_summary }}
 {% endif %}
