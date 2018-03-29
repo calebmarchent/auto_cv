@@ -15,7 +15,7 @@ Experience
 --
 
 
-Amino Communications (2010 - 2018)
+**Amino Communications** (2010 - 2018)
 </table>
 
 
@@ -43,7 +43,7 @@ Linux software development for media-streaming devices (STBs) and services. Hire
 
 
 
-Global Graphics (2008 - 2010)
+**Global Graphics** (2008 - 2010)
 </table>
 
 
@@ -53,7 +53,7 @@ Electronic document software; Managed team to deliver PDF workflow software for 
 
 
 
-TTPCom (2003 - 2008)
+**TTPCom** (2003 - 2008)
 </table>
 
 
@@ -77,7 +77,7 @@ Mobile Telecommunications; GSM, GPRS and the first Intel-based 3G handset. Appoi
 
 
 
-Pace Micro Technology (2000 - 2003)
+**Pace Micro Technology** (2000 - 2003)
 </table>
 
 
@@ -87,7 +87,7 @@ Automated test system development, including C based API validation
 
 
 
-Philips Communications (1998 - 2000)
+**Philips Communications** (1998 - 2000)
 </table>
 
 

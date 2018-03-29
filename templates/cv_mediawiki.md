@@ -15,7 +15,7 @@ Experience
 --
 {% for position in positions %}
 
-{{ position.company_name }} ({{ position.start }} - {{ position.finish }})
+**{{ position.company_name }}** ({{ position.start }} - {{ position.finish }})
 </table>
 
 {% if position.company_summary is defined %}
