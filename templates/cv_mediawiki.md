@@ -15,8 +15,9 @@ Experience
 --
 {% for position in positions %}
 
-<table border="0">
-<tr><td>{{ position.company_name }}<td class="role_title">{{ position.title }}<td class="date">{{ position.start }} - {{ position.finish }}</td>
+
+| ---------- | :-------------: | ------: |
+| {{ position.company_name }} | {{ position.title }} | {{ position.start }} - {{ position.finish }} |
 </table>
 
 {% if position.company_summary is defined %}

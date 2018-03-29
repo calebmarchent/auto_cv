@@ -15,8 +15,9 @@ Experience
 --
 
 
-<table border="0">
-<tr><td>Amino Communications<td class="role_title">Software Development Manager<td class="date">2010 - 2018</td>
+
+| ---------- | :-------------: | ------: |
+| Amino Communications | Software Development Manager | 2010 - 2018 |
 </table>
 
 
@@ -44,8 +45,9 @@ Linux software development for media-streaming devices (STBs) and services. Hire
 
 
 
-<table border="0">
-<tr><td>Global Graphics<td class="role_title">Software Release Coordinator<td class="date">2008 - 2010</td>
+
+| ---------- | :-------------: | ------: |
+| Global Graphics | Software Release Coordinator | 2008 - 2010 |
 </table>
 
 
@@ -55,8 +57,9 @@ Electronic document software; Managed team to deliver PDF workflow software for 
 
 
 
-<table border="0">
-<tr><td>TTPCom<td class="role_title">Staff Senior Software Engineer<td class="date">2003 - 2008</td>
+
+| ---------- | :-------------: | ------: |
+| TTPCom | Staff Senior Software Engineer | 2003 - 2008 |
 </table>
 
 
@@ -80,8 +83,9 @@ Mobile Telecommunications; GSM, GPRS and the first Intel-based 3G handset. Appoi
 
 
 
-<table border="0">
-<tr><td>Pace Micro Technology<td class="role_title">Software Quality Assurance Engineer<td class="date">2000 - 2003</td>
+
+| ---------- | :-------------: | ------: |
+| Pace Micro Technology | Software Quality Assurance Engineer | 2000 - 2003 |
 </table>
 
 
@@ -91,8 +95,9 @@ Automated test system development, including C based API validation
 
 
 
-<table border="0">
-<tr><td>Philips Communications<td class="role_title">Software Engineer<td class="date">1998 - 2000</td>
+
+| ---------- | :-------------: | ------: |
+| Philips Communications | Software Engineer | 1998 - 2000 |
 </table>
 
 
