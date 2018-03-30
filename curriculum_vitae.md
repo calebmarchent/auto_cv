@@ -13,7 +13,7 @@ Key Skills
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
-|* **Agile:** Certified Scrum Master<br />* **Bug Tracking:** JIRA, Bugzilla | right-aligned | $1600 |
+| <li> **Agile:** Certified Scrum Master<br /><li> **Bug Tracking:** JIRA, Bugzilla | right-aligned | $1600 |
 |       | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
