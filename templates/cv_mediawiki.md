@@ -11,6 +11,12 @@ Holds a rare combination of talents; a broad knowledge of the development, produ
 Key Skills
 --
 
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
 Experience
 --
 {% for position in positions %}
