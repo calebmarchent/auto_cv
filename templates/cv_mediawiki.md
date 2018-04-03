@@ -13,9 +13,7 @@ Key Skills
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
-| <li> **Agile:** Certified Scrum Master<br /><li> **Bug Tracking:** JIRA, Bugzilla<br /><li> **Continuous Integration:** Jenkins<br /><li> **Build:** Buildroot, GNU Make, Autotools<br /><li> **Version Control:** Git, SVN, CVS, Peforce<br />
- | right-aligned | $1600 |
-
+| <li> **Agile:** Certified Scrum Master<br /><li> **Bug Tracking:** JIRA, Bugzilla<br /><li> **Continuous Integration:** Jenkins<br /><li> **Build:** Buildroot, GNU Make, Autotools<br /><li> **Version Control:** Git, SVN, CVS, Peforce<br /> |  | $1600 |
 
 
 Experience
