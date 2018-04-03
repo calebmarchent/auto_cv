@@ -6,9 +6,10 @@ Caleb Marchent
 
 Profile
 --
-Software Engineer with 20 years experience, predominantly as a hands-on developer leading teams of highly skilled engineers to deliver products using whatever technology is required. Seeks another hands-on technical role, working closely in a team with other engineers to successfully deliver products that satisfy customers.
+{% for para in elevator_pitch %}
+{{ para }}
 
-Holds a rare combination of talents; a broad knowledge of the development, production and support of software, the ability to write code, script systems and use tools while at the same time - create, mentor and manage teams that can do this on a larger scale. Grace under pressure while dealing with demanding customers from around the world and delivering on tight deadlines.
+{% endfor %}
 
 Key Skills
 --
