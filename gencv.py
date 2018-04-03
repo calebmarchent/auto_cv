@@ -41,6 +41,9 @@ for grp in cvdb['skill_groups']:
 #            processed_cvdb['skill_groups'][row]['items'].append(skill)
     row += 1
 
+processed_cvdb['contact_info'] = " | ".join((cvdb['contact_info']['postal_address'],
+                               cvdb['contact_info']['phone_number'],
+                               cvdb['contact_info']['email_address']))
 
 processed_cvdb['positions'] = cvdb['positions']
 processed_cvdb['elevator_pitch'] = cvdb['elevator_pitch']
@@ -125,8 +128,7 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
 
     document.add_heading('Caleb Marchent', 0)
 
-    p = document.add_paragraph('120 High Street, Landbeach, Cambridge, CB25 8FU ' +
-                               '| 07803 296105 | caleb.marchent@iee.org',
+    p = document.add_paragraph(processed_cvdb['contact_info'],
                                style='contact_info')
 
     document.add_heading('Profile', level=2)

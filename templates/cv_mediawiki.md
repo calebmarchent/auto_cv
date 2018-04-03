@@ -1,6 +1,8 @@
 Caleb Marchent
 ==
-caleb.marchent@iee.org
+{% if contact_info is defined %}
+{{ contact_info }}
+{% endif %}
 
 Profile
 --

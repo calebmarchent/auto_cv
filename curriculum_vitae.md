@@ -1,6 +1,8 @@
 Caleb Marchent
 ==
-caleb.marchent@iee.org
+
+120 High Street, Landbeach, Cambridge, CB25 9FU | 07803 296105 | caleb.marchent@iee.org
+
 
 Profile
 --
@@ -13,9 +15,7 @@ Key Skills
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
-| <li> **Agile:** Certified Scrum Master<br /><li> **Bug Tracking:** JIRA, Bugzilla<br /><li> **Continuous Integration:** Jenkins<br /><li> **Build:** Buildroot, GNU Make, Autotools<br /><li> **Version Control:** Git, SVN, CVS, Peforce<br />
- | right-aligned | $1600 |
-
+| <li> **Agile:** Certified Scrum Master<br /><li> **Bug Tracking:** JIRA, Bugzilla<br /><li> **Continuous Integration:** Jenkins<br /><li> **Build:** Buildroot, GNU Make, Autotools<br /><li> **Version Control:** Git, SVN, CVS, Perforce<br /> |  | |
 
 
 Experience
