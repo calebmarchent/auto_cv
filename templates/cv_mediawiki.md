@@ -16,7 +16,7 @@ Key Skills
 
 | {% for g in skill_groups %} {{ g['heading'] }} | {% endfor %} 
 | ------------- | ------------- | ----- |
-| {% for g in skill_groups %}{% for s in g['items'] %}<li> {{ s }} <br />{% endfor %} | {% endfor %}
+| {% for g in skill_groups %}{% for s in g['items'] %}<li> {{ s|replace("*", "**") }} <br />{% endfor %} | {% endfor %}
 
  
 
