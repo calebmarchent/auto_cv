@@ -72,7 +72,7 @@ positions:
     finish: 2018
   - brief: global_graphics
     company_name: "Global Graphics"
-    company_summary: "Electronic document software; Managed team to deliver PDF workflow software for Windows"
+    company_summary: "Electronic document software; Managed team to deliver PDF workflow software using for Windows"
     title: "Software Release Coordinator"
     start: 2008
     finish: 2010
@@ -99,6 +99,12 @@ positions:
 
 achievements:
   amino:
+    - desc: "Implemented rsyslog support to the AminoMOVE CloudTV media backend, enabling its output to be fed to the
+             log collection and analysis tools Splunk and Unomaly allowing production deployment issues to be field
+             issues to be rapidly identified and understood"
+    - desc: "Delivered a complete set of demonstrator services used to support the sales team in winning opportunities;
+             including developing the ground-breaking concept of using an Amino STB as the cable to IP turn-around acting
+             as the content source for the Amino's first AWS hosted CloudTV service"
     - desc: "Developed automatic build and release systems to assure the stability of the common code base, aligning
              build and release processes to eliminating release day delays due to broken configuration"
     - desc: "Migrated software development from CVS to Git including retention of complete version history allowing
@@ -111,15 +117,12 @@ achievements:
     - desc: "Developed the company's first Scrum tool using MySQL, perl, HTML and Javascript, automatically synchronised
              with TestTrack Bug-Tracker allowing consistent prioritised backlogs for each team and reducing administrative burden"
     - desc: "Platform ports Amino’s AmiNET Linux media streaming stack to ST 7105 and later Intel Berryville family of STBs"
+      tags: []
     - desc: "As Amino acquired Entone, led first cross-site team of Amino engineers developing for the Entone enable
              stack; successfully delivering Amino’s first MPEG Dash integration."
       tags: []
     - desc: "After Amino acquisition of Booxmedia, led the first cross-site team of Amino engineers taking our existing
              skills in Linux, multimedia decode for consumer devices and re-apply in the the delivery of OTT CloudTV video services "
-    - desc: "Delivered a complete set of demonstrator services used to support the sales team in winning opportunities;
-             including developing the ground-breaking concept of using an Amino STB as the cable to IP turn-around acting
-             as the content source for a complete live video and network PVR recording service. "
-      tags: []
     - desc: "Working closing with our client through daily cross-company scrum stand-ups delivered Amino’s first end-to-end
              Service to screen multi-media video solution delivered through multiple DRM protected ABR formats (HLS, DASH, MSS).
              Including live streaming services (264 channel), recording services (50+ channels), radio channels, pause liveTV"
@@ -135,9 +138,7 @@ achievements:
     - desc: "First action on joining team was to initiate daily regression tests to eliminate associated delays in development and QA"
       tags: []
     - desc: "Formulated framework for developer tests, using QT’s built-in javascript technology. Used to implement tests during module development which were then built into a suite for avoiding regressions in subsequent iterations"
-      tags: []
     - desc: "Defined change request tracking processes and then evolved it throughout the project to support team’s constant process improvement"
-      tags: []
     - desc: "Scripted automated import processes for 3rd party modules, using Perl and Perforce, which improved consistency and minimised required effort for the regular import cycles"
       tags: []
     - desc: "Extended VB skills to Lotus Script, then used to migrate product backlogs into a combined database simplifying cross-team request tracking, progress reporting and removing significant administrative overhead"
@@ -157,7 +158,7 @@ achievements:
     - desc: "Wrote Perl scripts which analysed the build options applied to each software module in both development and client profiles pre-emptively identifying and resolving latent defects"
       tags: ['base']
     - desc: "Used SQL and Perl skills to write tool to export issue tracking history empowering clients to resolve common issues independently"
-      tags: ['base']
+      tags: []
     - desc: "Defined Support Processes for the Motorola WiMAX programme optimising communication with client engineers, while maintaining project control"
       tags: ['base']
     - desc: "Chaired software issue reviews with customers ensuring correct prioritisation, open communication and building customer confidence"
@@ -171,7 +172,7 @@ achievements:
     - desc: "Managed integration of TTPCom's MP3 and AMR solutions leading to successful launches"
       tags: []
     - desc: "Recruited test team leader, software and test engineers who became key to project success"
-      tags: ['base']
+      tags: []
     - desc: "Integrated AJAR (TTPCom's C++ Application Layer) onto new 3G chip-set overcoming platform, compiler and configuration issues"
       tags: []
     - desc: "Investigated and debugged protocol stack issues through 2G physical layer, RF, DSP, L1, AT interface, 3G protocol stack and up to application"

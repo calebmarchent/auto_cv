@@ -31,6 +31,10 @@ Linux software development for media-streaming devices (STBs) and services. Hire
 
 
 
+* Implemented rsyslog support to the AminoMOVE CloudTV media backend, enabling its output to be fed to the log collection and analysis tools Splunk and Unomaly allowing production deployment issues to be field issues to be rapidly identified and understood
+
+* Delivered a complete set of demonstrator services used to support the sales team in winning opportunities; including developing the ground-breaking concept of using an Amino STB as the cable to IP turn-around acting as the content source for the Amino's first AWS hosted CloudTV service
+
 * Developed automatic build and release systems to assure the stability of the common code base, aligning build and release processes to eliminating release day delays due to broken configuration
 
 * Migrated software development from CVS to Git including retention of complete version history allowing developers to take advantage of modern version control tool while retaining the ability to go back and understand the decisions behind code implementation.
@@ -40,8 +44,6 @@ Linux software development for media-streaming devices (STBs) and services. Hire
 * Ensured developer communication, regular knowledge sharing as Scrum Master and team lead for AmiNET firmware, and later AVG (Audio, Video and Graphics) teams
 
 * Developed the company's first Scrum tool using MySQL, perl, HTML and Javascript, automatically synchronised with TestTrack Bug-Tracker allowing consistent prioritised backlogs for each team and reducing administrative burden
-
-* Platform ports Amino’s AmiNET Linux media streaming stack to ST 7105 and later Intel Berryville family of STBs
 
 * After Amino acquisition of Booxmedia, led the first cross-site team of Amino engineers taking our existing skills in Linux, multimedia decode for consumer devices and re-apply in the the delivery of OTT CloudTV video services 
 
@@ -55,9 +57,13 @@ Linux software development for media-streaming devices (STBs) and services. Hire
 </table>
 
 
-Electronic document software; Managed team to deliver PDF workflow software for Windows
+Electronic document software; Managed team to deliver PDF workflow software using for Windows
 
 
+
+* Formulated framework for developer tests, using QT’s built-in javascript technology. Used to implement tests during module development which were then built into a suite for avoiding regressions in subsequent iterations
+
+* Defined change request tracking processes and then evolved it throughout the project to support team’s constant process improvement
 
 
 
@@ -77,11 +83,7 @@ Mobile Telecommunications; GSM, GPRS and the first Intel-based 3G handset. Appoi
 
 * Wrote Perl scripts which analysed the build options applied to each software module in both development and client profiles pre-emptively identifying and resolving latent defects
 
-* Used SQL and Perl skills to write tool to export issue tracking history empowering clients to resolve common issues independently
-
 * Defined Support Processes for the Motorola WiMAX programme optimising communication with client engineers, while maintaining project control
-
-* Recruited test team leader, software and test engineers who became key to project success
 
 
 
