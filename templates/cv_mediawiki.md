@@ -14,9 +14,9 @@ Profile
 Key Skills
 --
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| {% for g in skill_groups %}{% for s in g['items'] %}<li> {{ s }} <br />{% endfor %} | {% endfor %} |
+| {% for g in skill_groups %} {{ g['heading'] }} | {% endfor %} 
+| ------------- | ------------- | ----- |
+| {% for g in skill_groups %}{% for s in g['items'] %}<li> {{ s }} <br />{% endfor %} | {% endfor %}
 
  
 

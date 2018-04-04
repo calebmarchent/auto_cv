@@ -14,9 +14,9 @@ Software Engineer with 20 years experience, predominantly as a hands-on develope
 Key Skills
 --
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| <li> *Agile:* Certified Scrum Master <br /><li> *Bug Tracking:* JIRA, Bugzilla <br /><li> *Continuous Integration:* Jenkins <br /><li> *Build:* Buildroot, GNU Make, Autotools <br /><li> *Version Control:* Git, SVN, CVS, Perforce <br /> | <li> *Script Development:* Bash, Perl, Python <br /><li> *Programming:* C, C++, SQL <br /><li> *Linux Development* for both consumer device and servers <br /><li> *Debian* Administration and Package Development <br /> | <li> *Line Management* approach tailored to individual <br /><li> *Recruiting,* Building Teams <br /><li> *Mentoring,* Goal Setting & Performance Tracking <br /><li> *Software Change* & Configuration Management <br /><li> *Collaborative*, clear vision <br /> |  |
+|  Technical |  Tools |  Leadership |  
+| ------------- | ------------- | ----- |
+| <li> *Agile:* Certified Scrum Master <br /><li> *Bug Tracking:* JIRA, Bugzilla <br /><li> *Continuous Integration:* Jenkins <br /><li> *Build:* Buildroot, GNU Make, Autotools <br /><li> *Version Control:* Git, SVN, CVS, Perforce <br /> | <li> *Script Development:* Bash, Perl, Python <br /><li> *Programming:* C, C++, SQL <br /><li> *Linux Development* for both consumer device and servers <br /><li> *Debian* Administration and Package Development <br /> | <li> *Line Management* approach tailored to individual <br /><li> *Recruiting,* Building Teams <br /><li> *Mentoring,* Goal Setting & Performance Tracking <br /><li> *Software Change* & Configuration Management <br /><li> *Collaborative*, clear vision <br /> | 
 
  
 
