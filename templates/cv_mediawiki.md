@@ -16,7 +16,7 @@ Key Skills
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
-| {% for s in skill_groups[0]['items'] %}<li> {{ s }} <br />{% endfor %} |  | |
+| {% for g in skill_groups %}{% for s in g['items'] %}<li> {{ s }} <br />{% endfor %} | {% endfor %} |
 
  
 
