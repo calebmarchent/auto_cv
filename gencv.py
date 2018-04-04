@@ -69,7 +69,7 @@ env = Environment(
 template = env.get_template('cv_mediawiki.md')
 
 # to save the results
-with open("curriculum_vitae.md", "wb") as fh:
+with open("README.md", "wb") as fh:
     fh.write(template.render(processed_cvdb).encode('utf-8'))
 
 if OUTPUT_DOCUMENT_TYPE == "html":
