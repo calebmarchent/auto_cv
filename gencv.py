@@ -19,7 +19,8 @@ output_options = {
     # For some applications it will be more suitable to define the role I was doing in the summary text, than the
     # company given title
     'show_position_titles': False,
-    'show_skill_headings': False
+    'show_skill_headings': False,
+    'include_tags': ['base', 'fb001']
 }
 cvdb = {}
 
@@ -53,7 +54,7 @@ processed_cvdb['achievements'] = {}
 for position, position_achievements in cvdb['achievements'].iteritems():
     processed_cvdb['achievements'][position] = list()
     for achievement in position_achievements:
-        if ('tags' not in achievement) or ('base' in achievement['tags']):
+        if ('tags' not in achievement) or bool(set(output_options['include_tags']) & set(achievement['tags'])):
             processed_cvdb['achievements'][position].append(achievement)
 
 processed_cvdb['education'] = cvdb['education']
