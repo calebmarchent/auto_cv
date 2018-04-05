@@ -28,7 +28,6 @@ Experience
 
 
 **Amino Communications** (2010 - 2018)
-</table>
 
 
 Linux software development for media-streaming devices (STBs) and services. Hired to fill two roles: Scrum Master for the Platform team and "toolsmith" developing toolchains, release systems and developer tools to ensure developer productivity
@@ -58,7 +57,6 @@ Linux software development for media-streaming devices (STBs) and services. Hire
 
 
 **Global Graphics** (2008 - 2010)
-</table>
 
 
 Electronic document software; Managed team to deliver PDF workflow software using for Windows
@@ -72,7 +70,6 @@ Electronic document software; Managed team to deliver PDF workflow software usin
 
 
 **TTPCom** (2003 - 2008)
-</table>
 
 
 Mobile Telecommunications; GSM, GPRS and the first Intel-based 3G handset. Appointed to provide dedicated engineering support for integration to customers using TTPCom mobile stack. Later moved on to run teams and then then run the support team
@@ -92,7 +89,6 @@ Mobile Telecommunications; GSM, GPRS and the first Intel-based 3G handset. Appoi
 
 
 **Pace Micro Technology** (2000 - 2003)
-</table>
 
 
 Automated test system development, including C based API validation
@@ -102,7 +98,6 @@ Automated test system development, including C based API validation
 
 
 **Philips Communications** (1998 - 2000)
-</table>
 
 
 Embedded Software Development for Pagers
