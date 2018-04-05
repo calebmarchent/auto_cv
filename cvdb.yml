@@ -142,7 +142,7 @@ achievements:
     - desc: "Scripted automated import processes for 3rd party modules, using Perl and Perforce, which improved consistency and minimised required effort for the regular import cycles"
       tags: []
     - desc: "Extended VB skills to Lotus Script, then used to migrate product backlogs into a combined database simplifying cross-team request tracking, progress reporting and removing significant administrative overhead"
-      tags: []
+      tags: [ ]
     - desc: "Acted as Scrum Master for the first Global Graphics project to use Agile methods, adapting and advancing existing traditional processes and tools to expedite a rapid transition while minimising the impact of the change on team productivity"
       tags: []
     - desc: "Investigated bugs prioritising and channelling to correct team for resolution"

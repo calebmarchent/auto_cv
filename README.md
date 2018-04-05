@@ -1,5 +1,7 @@
 [About...](ABOUT.md)
 
+[Download Microsoft Word version ...](https://github.com/calebmarchent/auto_cv/raw/master/curriculum_vitae.docx)
+
 Caleb Marchent
 ==
 
