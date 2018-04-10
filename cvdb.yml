@@ -102,6 +102,7 @@ achievements:
     - desc: "Implemented rsyslog support to the AminoMOVE CloudTV media backend, enabling its output to be fed to the
              log collection and analysis tools Splunk and Unomaly allowing production deployment issues to be field
              issues to be rapidly identified and understood"
+      tags: ['fb001']
     - desc: "Delivered a complete set of demonstrator services used to support the sales team in winning opportunities;
              including developing the ground-breaking concept of using an Amino STB as the cable to IP turn-around acting
              as the content source for the Amino's first AWS hosted CloudTV service"
