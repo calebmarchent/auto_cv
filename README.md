@@ -36,7 +36,9 @@ Linux software development for media-streaming devices (STBs) and services. Hire
 
 
 
-* Implemented rsyslog support to the AminoMOVE CloudTV media backend, enabling its output to be fed to the log collection and analysis tools Splunk and Unomaly allowing production deployment issues to be field issues to be rapidly identified and understood
+* Ensured developer communication, regular knowledge sharing as Scrum Master and team lead for AmiNET firmware, and later AVG (Audio, Video and Graphics) teams
+
+* Developed the company's first Scrum tool using MySQL, perl, HTML and Javascript, automatically synchronised with TestTrack Bug-Tracker allowing consistent prioritised backlogs for each team and reducing administrative burden
 
 * Delivered a complete set of demonstrator services used to support the sales team in winning opportunities; including developing the ground-breaking concept of using an Amino STB as the cable to IP turn-around acting as the content source for the Amino's first AWS hosted CloudTV service
 
@@ -45,10 +47,6 @@ Linux software development for media-streaming devices (STBs) and services. Hire
 * Migrated software development from CVS to Git including retention of complete version history allowing developers to take advantage of modern version control tool while retaining the ability to go back and understand the decisions behind code implementation.
 
 * Developed and maintained Debian packages for toolchains and common development tools ensuring a consistent build environment and hence reducing developer time tracking down machine specific bugs
-
-* Ensured developer communication, regular knowledge sharing as Scrum Master and team lead for AmiNET firmware, and later AVG (Audio, Video and Graphics) teams
-
-* Developed the company's first Scrum tool using MySQL, perl, HTML and Javascript, automatically synchronised with TestTrack Bug-Tracker allowing consistent prioritised backlogs for each team and reducing administrative burden
 
 * After Amino acquisition of Booxmedia, led the first cross-site team of Amino engineers taking our existing skills in Linux, multimedia decode for consumer devices and re-apply in the the delivery of OTT CloudTV video services 
 

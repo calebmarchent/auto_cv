@@ -20,7 +20,7 @@ output_options = {
     # company given title
     'show_position_titles': False,
     'show_skill_headings': False,
-    'include_tags': ['base', 'fb001']
+    'include_tags': ['base']
 }
 cvdb = {}
 
