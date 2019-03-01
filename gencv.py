@@ -190,7 +190,12 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
             p.add_run("\t" + position['title'] + "\t")
         else:
             p.add_run("\t\t")
-        p.add_run(str(position['start']) + " - " + str(position['finish'])).bold = True
+
+        if 'finish' in position:
+           finish_txt = position['finish']
+        else:
+           finish_txt = 'to date'
+        p.add_run(str(position['start']) + " - " + str(finish_txt)).bold = True
 
         p.paragraph_format.tab_stops.add_tab_stop(Inches(3), WD_TAB_ALIGNMENT.CENTER)
         p.paragraph_format.tab_stops.add_tab_stop(Inches(6), WD_TAB_ALIGNMENT.RIGHT)
@@ -198,8 +203,10 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
         if 'company_summary' in position:
             document.add_paragraph(position['company_summary'], style='company_summary')
 
-        for achievement in processed_cvdb['achievements'][position['brief']]:
-            p = document.add_paragraph(achievement['desc'], style='achievement_bullet')
+        if position['brief'] in processed_cvdb['achievements']:
+            for achievement in processed_cvdb['achievements'][position['brief']]:
+                p = document.add_paragraph(achievement['desc'],
+                    style='achievement_bullet')
 
     document.add_heading('Education', level=2)
 

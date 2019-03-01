@@ -41,7 +41,7 @@ skill_groups:
   - "*Agile:* Certified Scrum Master"
   - "*Bug Tracking:* JIRA, Bugzilla"
   - "*Continuous Integration:* Jenkins"
-  - "*Build:* Buildroot, GNU Make, Autotools"
+  - "*Build:* CMake, Buildroot, GNU Make, Autotools"
   - "*Version Control:* Git, SVN, CVS, Perforce"
 #  - "Zabbix service monitoring"
 #  - "Cloud Tools:\nDocker, Vagrant, Ansible"
@@ -63,6 +63,11 @@ skill_groups:
 
 
 positions:
+  - brief: contract_at_facebook
+    company_name: "Contract via Aquent at Facebook"
+    title: "Platform Engineer (Contract)"
+    company_summary: "LogDevice OpenSource"
+    start: 2018
   - brief: amino
     company_name: "Amino Communications"
     company_summary: 'Linux software development for media-streaming devices (STBs) and services. Hired to fill two roles:
