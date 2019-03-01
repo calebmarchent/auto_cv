@@ -16,8 +16,8 @@ import datetime
 
 output_options = {
     # Should company given titles be shown?
-    # For some applications it will be more suitable to define the role I was doing in the summary text, than the
-    # company given title
+    # For some applications it will be more suitable to define the role I was
+    # doing in the summary text, than the company given title
     'show_position_titles': False,
     'show_skill_headings': False,
     'include_tags': ['base']
@@ -30,7 +30,8 @@ with open("cvdb.yml", 'r') as stream:
     except yaml.YAMLError as exc:
         print(exc)
 
-# Process the imported YAML; creating the structure required for the document from the source database
+# Process the imported YAML; creating the structure required for the document
+# from the source database
 processed_cvdb = dict()
 processed_cvdb['skill_groups'] = list()
 row = 0
@@ -42,9 +43,10 @@ for grp in cvdb['skill_groups']:
 #            processed_cvdb['skill_groups'][row]['items'].append(skill)
     row += 1
 
-processed_cvdb['contact_info'] = " | ".join((cvdb['contact_info']['postal_address'],
-                               cvdb['contact_info']['phone_number'],
-                               cvdb['contact_info']['email_address']))
+processed_cvdb['contact_info'] = " | ".join((
+    cvdb['contact_info']['postal_address'],
+    cvdb['contact_info']['phone_number'],
+    cvdb['contact_info']['email_address']))
 
 processed_cvdb['positions'] = cvdb['positions']
 processed_cvdb['elevator_pitch'] = cvdb['elevator_pitch']
@@ -124,8 +126,9 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     document.core_properties.title = "Caleb Marchent"
     document.core_properties.author = "Caleb Marchent - Curriculum Vitae"
     document.core_properties.created = datetime.datetime.now()
-    document.core_properties.comments = "Generated Automatically\nSource code available at:\n" + \
-                                        "https://github.com/calebmarchent/auto_cv.git"
+    document.core_properties.comments = \
+        "Generated Automatically\nSource code available at:\n" + \
+        "https://github.com/calebmarchent/auto_cv.git"
 
     document.add_heading('Caleb Marchent', 0)
 
@@ -144,8 +147,10 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
                                cols=len(processed_cvdb['skill_groups']))
     col = 0
 
-    # Populate table with skills, each cell will have a default paragraph generated automatically by the API, as not
-    # having one is invalid syntax; for the first paragraph we need to update where we 'add' for the other bullets
+    # Populate table with skills, each cell will have a default paragraph
+    # generated automatically by the API, as not having one is invalid syntax;
+    # for the first paragraph we need to update where we 'add' for the other
+    # bullets
 
     for skill_group in processed_cvdb['skill_groups']:
         row = 0
@@ -161,9 +166,11 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
             else:
                 p = hdr_cells[row].add_paragraph('', style='skills_bullet')
 
-            # Look for embolden sections and split run to illuminate the text between them
-            # FIXME: The code below alternates boldness on each occurance of *, while it would work for now,
-            # it is not extensible to handle other formatting charaters.
+            # Look for embolden sections and split run to illuminate the text
+            # between them
+            # FIXME: The code below alternates boldness on each occurance of *,
+            # while it would work for now, it is not extensible to handle other
+            # formatting charaters.
             b = False
             for run in skill.split('*'):
                 p.add_run(run).bold = b
