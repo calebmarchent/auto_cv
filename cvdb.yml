@@ -66,7 +66,7 @@ positions:
   - brief: contract_at_facebook
     company_name: "Contract via Aquent at Facebook"
     title: "Platform Engineer (Contract)"
-    company_summary: "LogDevice OpenSource"
+    company_summary: "Contract to deliver LogDevice Open Source, making a key component of Facebooks data-infrastructure available for use and contribution by the open source community"
     start: 2018
   - brief: amino
     company_name: "Amino Communications"
@@ -103,6 +103,14 @@ positions:
     finish: 2000
 
 achievements:
+  contract_at_facebook:
+    - desc: "Port LogDevice to CMake build environment; allowing development outside Faceboook infrastructure."
+    - desc: "Configured Travis and then CircleCI CI pipelines for LogDevice compiling, unit and system testing publishing to images to DockerHub and documents to GitHub. Allowing rapid signal for developers of the impact of their diffs on LogDevice-OSS."
+    - desc: "Debugged unit test (Google Test, Python); as exposed by running in CI environment (Docker)"
+      tags: []
+    - desc: "Creation of Debian packages for LogDevice; to allow rapid installation."
+    - desc: "Internal CI pipelines using Facebook infrastructure to give internal developers feedback on every diff."
+    - desc: "Ported FBThrift-py3 to open source, the first Cython compiled open source offering from Facebook and a key component in opening many more projects to the community in its position as a building block for Facebook systems and servicesx"
   amino:
     - desc: "Implemented rsyslog support to the AminoMOVE CloudTV media backend, enabling its output to be fed to the
              log collection and analysis tools Splunk and Unomaly allowing production deployment issues to be field
@@ -145,8 +153,10 @@ achievements:
       tags: []
     - desc: "Formulated framework for developer tests, using QT’s built-in javascript technology. Used to implement tests
              during module development which were then built into a suite for avoiding regressions in subsequent iterations"
+      tags: []
     - desc: "Defined change request tracking processes and then evolved it throughout the project to support team’s
              constant process improvement"
+      tags: []
     - desc: "Scripted automated import processes for 3rd party modules, using Perl and Perforce, which improved
              consistency and minimised required effort for the regular import cycles"
       tags: []
@@ -162,15 +172,15 @@ achievements:
     - desc: "Used in-depth understanding of build tools, TTPCom's release system and Perforce to create a tool chain that brought patches and releases together in a single process and reduced fix delivery times from 1 month to less than 1 day"
       tags: ['base']
     - desc: "Aligned development and client software configurations eliminating time to debug mismatches"
-      tags: ['base']
+      tags: []
     - desc: "Co-ordinated with other departments to agree a branching and integration strategy allowing a wider range of options to be delivered to future clients"
-      tags: ['base']
+      tags: []
     - desc: "Wrote Perl scripts which analysed the build options applied to each software module in both development and client profiles pre-emptively identifying and resolving latent defects"
       tags: ['base']
     - desc: "Used SQL and Perl skills to write tool to export issue tracking history empowering clients to resolve common issues independently"
       tags: []
     - desc: "Defined Support Processes for the Motorola WiMAX programme optimising communication with client engineers, while maintaining project control"
-      tags: ['base']
+      tags: []
     - desc: "Chaired software issue reviews with customers ensuring correct prioritisation, open communication and building customer confidence"
       tags: []
     - desc: "Led co-operation between not only organisation and client but also the network operator and equipment provider to complete resolution of issues"
