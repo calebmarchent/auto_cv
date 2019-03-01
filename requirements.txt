@@ -1,0 +1,10 @@
+Django>=1.11.11
+docx>=0.2.4
+Jinja2>=2.10
+lxml>=4.1.1
+MarkupSafe>=1.0
+Pillow>=5.0.0
+python-docx>=0.8.6
+pytz>=2018.3
+ruamel.ordereddict>=0.4.13
+ruamel.yaml>=0.15.33

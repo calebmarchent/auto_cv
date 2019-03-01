@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 """
 CV Generator
@@ -51,7 +51,7 @@ processed_cvdb['elevator_pitch'] = cvdb['elevator_pitch']
 processed_cvdb['further_information'] = cvdb['further_information']
 
 processed_cvdb['achievements'] = {}
-for position, position_achievements in cvdb['achievements'].iteritems():
+for position, position_achievements in cvdb['achievements'].items():
     processed_cvdb['achievements'][position] = list()
     for achievement in position_achievements:
         if ('tags' not in achievement) or bool(set(output_options['include_tags']) & set(achievement['tags'])):
