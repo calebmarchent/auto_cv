@@ -105,12 +105,16 @@ positions:
 achievements:
   contract_at_facebook:
     - desc: "Port LogDevice to CMake build environment; allowing development outside Facebook infrastructure."
-    - desc: "Configured Travis and then CircleCI CI pipelines for LogDevice compiling, unit and system testing publishing to images to DockerHub and documents to GitHub. Allowing rapid signal for developers of the impact of their diffs on LogDevice-OSS."
+    - desc: "Configured Travis and then CircleCI CI pipelines for LogDevice compiling, unit and system testing"
+            " publishing to images to DockerHub and documents to GitHub. Allowing rapid signal for developers of the"
+            " impact of their diffs on LogDevice-OSS."
     - desc: "Debugged unit test (Google Test, Python); as exposed by running in CI environment (Docker)"
       tags: []
     - desc: "Creation of Debian packages for LogDevice; to allow rapid installation."
     - desc: "Internal CI pipelines using Facebook infrastructure to give internal developers feedback on every diff."
-    - desc: "Ported FBThrift-py3 to open source, the first Cython compiled open source offering from Facebook and a key component in opening many more projects to the community in its position as a building block for Facebook systems and services"
+    - desc: "Ported FBThrift-py3 to open source, the first Cython compiled open source offering from Facebook and a key"
+            " component in opening many more projects to the community in its position as a building block for Facebook"
+            " systems and services"
   amino:
     - desc: "Implemented rsyslog support to the AminoMOVE CloudTV media backend, enabling its output to be fed to the
              log collection and analysis tools Splunk and Unomaly allowing production deployment issues to be field
@@ -163,13 +167,17 @@ achievements:
     - desc: "Extended VB skills to Lotus Script, then used to migrate product backlogs into a combined database
              simplifying cross-team request tracking, progress reporting and removing significant administrative overhead"
       tags: [ ]
-    - desc: "Acted as Scrum Master for the first Global Graphics project to use Agile methods, adapting and advancing existing traditional processes and tools to expedite a rapid transition while minimising the impact of the change on team productivity"
+    - desc: "Acted as Scrum Master for the first Global Graphics project to use Agile methods, adapting and advancing"
+            " existing traditional processes and tools to expedite a rapid transition while minimising the impact of the
+            " change on team productivity"
       tags: []
     - desc: "Investigated bugs prioritising and channelling to correct team for resolution"
       tags: []
 
   ttpcom:
-    - desc: "Used in-depth understanding of build tools, TTPCom's release system and Perforce to create a tool chain that brought patches and releases together in a single process and reduced fix delivery times from 1 month to less than 1 day"
+    - desc: "Used in-depth understanding of build tools, TTPCom's release system and Perforce to create a tool chain that
+             brought patches and releases together in a single process and reduced fix delivery times from 1 month to "
+             less than 1 day"
       tags: ['base']
     - desc: "Aligned development and client software configurations eliminating time to debug mismatches"
       tags: []
