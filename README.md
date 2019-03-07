@@ -20,7 +20,7 @@ Key Skills
 
 |  Technical |  Tools |  Leadership |  
 | ------------- | ------------- | ----- |
-| <li> **Agile:** Certified Scrum Master <br /><li> **Bug Tracking:** JIRA, Bugzilla <br /><li> **Continuous Integration:** Jenkins <br /><li> **Build:** CMake, Buildroot, GNU Make, Autotools <br /><li> **Version Control:** Git, SVN, CVS, Perforce <br /> | <li> **Script Development:** Bash, Perl, Python <br /><li> **Programming:** C, C++, SQL <br /><li> **Linux Development** for both consumer device and servers <br /><li> **Debian** Administration and Package Development <br /> | <li> **Line Management** approach tailored to individual <br /><li> **Recruiting,** Building Teams <br /><li> **Mentoring,** Goal Setting & Performance Tracking <br /><li> **Software Change** & Configuration Management <br /><li> **Collaborative**, clear vision <br /> | 
+| <li> **Agile:** Certified Scrum Master <br /><li> **Bug Tracking:** JIRA, Bugzilla <br /><li> **Continuous Integration:** Jenkins, CirlceCI, TravisCI <br /><li> **Build:** CMake, Buildroot, GNU Make, Autotools <br /><li> **Version Control:** Git, SVN, CVS, Perforce <br /> | <li> **Script Development:** Bash, Perl, Python <br /><li> **Programming:** C, C++, SQL <br /><li> **Linux Development** for both consumer device and servers <br /><li> **Debian** Administration and Package Development <br /> | <li> **Line Management** approach tailored to individual <br /><li> **Recruiting,** Building Teams <br /><li> **Mentoring,** Goal Setting & Performance Tracking <br /><li> **Software Change** & Configuration Management <br /><li> **Collaborative**, clear vision <br /> | 
 
  
 
@@ -36,7 +36,7 @@ Contract to deliver LogDevice Open Source, making a key component of Facebooks d
 
 
 
-* Port LogDevice to CMake build environment; allowing development outside Faceboook infrastructure.
+* Port LogDevice to CMake build environment; allowing development outside Facebook infrastructure.
 
 * Configured Travis and then CircleCI CI pipelines for LogDevice compiling, unit and system testing publishing to images to DockerHub and documents to GitHub. Allowing rapid signal for developers of the impact of their diffs on LogDevice-OSS.
 
@@ -44,7 +44,7 @@ Contract to deliver LogDevice Open Source, making a key component of Facebooks d
 
 * Internal CI pipelines using Facebook infrastructure to give internal developers feedback on every diff.
 
-* Ported FBThrift-py3 to open source, the first Cython compiled open source offering from Facebook and a key component in opening many more projects to the community in its position as a building block for Facebook systems and servicesx
+* Ported FBThrift-py3 to open source, the first Cython compiled open source offering from Facebook and a key component in opening many more projects to the community in its position as a building block for Facebook systems and services
 
 
 
@@ -69,7 +69,7 @@ Linux software development for media-streaming devices (STBs) and services. Hire
 
 * After Amino acquisition of Booxmedia, led the first cross-site team of Amino engineers taking our existing skills in Linux, multimedia decode for consumer devices and re-apply in the the delivery of OTT CloudTV video services 
 
-* Working closing with our client through daily cross-company scrum stand-ups delivered Amino’s first end-to-end Service to screen multi-media video solution delivered through multiple DRM protected ABR formats (HLS, DASH, MSS). Including live streaming services (264 channel), recording services (50+ channels), radio channels, pause liveTV
+* Working closely with our client through daily cross-company scrum stand-ups delivered Amino’s first end-to-end Service to screen multi-media video solution delivered through multiple DRM protected ABR formats (HLS, DASH, MSS). Including live streaming services (264 channel), recording services (50+ channels), radio channels, pause liveTV
 
 * Investigated and resolved production issues across the system ranging mobile applications (iOS, Android); HTML5 UI, Web Services (PHP, Yii), media backend (Python); deployment systems (Ansible, Docker), Networking issues (e.g. IGMP)
 

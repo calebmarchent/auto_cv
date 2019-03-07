@@ -66,12 +66,14 @@ positions:
   - brief: contract_at_facebook
     company_name: "Contract via Aquent at Facebook"
     title: "Platform Engineer (Contract)"
-    company_summary: "Contract to deliver LogDevice Open Source, making a key component of Facebooks data-infrastructure available for use and contribution by the open source community"
+    company_summary: "Contract to deliver LogDevice Open Source, making a key component of Facebooks data-infrastructure
+       available for use and contribution by the open source community"
     start: 2018
   - brief: amino
     company_name: "Amino Communications"
-    company_summary: 'Linux software development for media-streaming devices (STBs) and services. Hired to fill two roles:
-       Scrum Master for the Platform team and "toolsmith" developing toolchains, release systems and developer tools to ensure developer productivity'
+    company_summary: 'Linux software development for media-streaming devices (STBs) and services. Hired to fill two
+       roles: Scrum Master for the Platform team and "toolsmith" developing toolchains, release systems and developer
+       tools to ensure developer productivity'
     title: "Software Development Manager"
     start: 2010
     finish: 2018
@@ -105,24 +107,24 @@ positions:
 achievements:
   contract_at_facebook:
     - desc: "Port LogDevice to CMake build environment; allowing development outside Facebook infrastructure."
-    - desc: "Configured Travis and then CircleCI CI pipelines for LogDevice compiling, unit and system testing"
-            " publishing to images to DockerHub and documents to GitHub. Allowing rapid signal for developers of the"
-            " impact of their diffs on LogDevice-OSS."
+    - desc: "Configured Travis and then CircleCI CI pipelines for LogDevice compiling, unit and system testing
+             publishing to images to DockerHub and documents to GitHub. Allowing rapid signal for developers of the
+             impact of their diffs on LogDevice-OSS."
     - desc: "Debugged unit test (Google Test, Python); as exposed by running in CI environment (Docker)"
       tags: []
     - desc: "Creation of Debian packages for LogDevice; to allow rapid installation."
     - desc: "Internal CI pipelines using Facebook infrastructure to give internal developers feedback on every diff."
-    - desc: "Ported FBThrift-py3 to open source, the first Cython compiled open source offering from Facebook and a key"
-            " component in opening many more projects to the community in its position as a building block for Facebook"
-            " systems and services"
+    - desc: "Ported FBThrift-py3 to open source, the first Cython compiled open source offering from Facebook and a key
+             component in opening many more projects to the community in its position as a building block for Facebook
+             systems and services"
   amino:
     - desc: "Implemented rsyslog support to the AminoMOVE CloudTV media backend, enabling its output to be fed to the
              log collection and analysis tools Splunk and Unomaly allowing production deployment issues to be field
              issues to be rapidly identified and understood"
       tags: ['fb001']
     - desc: "Delivered a complete set of demonstrator services used to support the sales team in winning opportunities;
-             including developing the ground-breaking concept of using an Amino STB as the cable to IP turn-around acting
-             as the content source for the Amino's first AWS hosted CloudTV service"
+             including developing the ground-breaking concept of using an Amino STB as the cable to IP turn-around
+             acting as the content source for the Amino's first AWS hosted CloudTV service"
     - desc: "Developed automatic build and release systems to assure the stability of the common code base, aligning
              build and release processes to eliminating release day delays due to broken configuration"
     - desc: "Migrated software development from CVS to Git including retention of complete version history allowing
@@ -130,33 +132,41 @@ achievements:
              understand the decisions behind code implementation."
     - desc: "Developed and maintained Debian packages for toolchains and common development tools ensuring a consistent
              build environment and hence reducing developer time tracking down machine specific bugs"
-    - desc: "Ensured developer communication, regular knowledge sharing as Scrum Master and team lead for AmiNET firmware,
-             and later AVG (Audio, Video and Graphics) teams"
+    - desc: "Ensured developer communication, regular knowledge sharing as Scrum Master and team lead for AmiNET
+             firmware, and later AVG (Audio, Video and Graphics) teams"
     - desc: "Developed the company's first Scrum tool using MySQL, perl, HTML and Javascript, automatically synchronised
-             with TestTrack Bug-Tracker allowing consistent prioritised backlogs for each team and reducing administrative burden"
-    - desc: "Platform ports Amino’s AmiNET Linux media streaming stack to ST 7105 and later Intel Berryville family of STBs"
+             with TestTrack Bug-Tracker allowing consistent prioritised backlogs for each team and reducing
+             administrative burden"
+    - desc: "Platform ports Amino’s AmiNET Linux media streaming stack to ST 7105 and later Intel Berryville family of
+             STBs"
       tags: []
     - desc: "As Amino acquired Entone, led first cross-site team of Amino engineers developing for the Entone enable
              stack; successfully delivering Amino’s first MPEG Dash integration."
       tags: []
     - desc: "After Amino acquisition of Booxmedia, led the first cross-site team of Amino engineers taking our existing
-             skills in Linux, multimedia decode for consumer devices and re-apply in the the delivery of OTT CloudTV video services "
-    - desc: "Working closely with our client through daily cross-company scrum stand-ups delivered Amino’s first end-to-end
-             Service to screen multi-media video solution delivered through multiple DRM protected ABR formats (HLS, DASH, MSS).
-             Including live streaming services (264 channel), recording services (50+ channels), radio channels, pause liveTV"
+             skills in Linux, multimedia decode for consumer devices and re-apply in the the delivery of OTT CloudTV
+             video services "
+    - desc: "Working closely with our client through daily cross-company scrum stand-ups delivered Amino’s first
+             end-to-end Service to screen multi-media video solution delivered through multiple DRM protected ABR
+             formats (HLS, DASH, MSS). Including live streaming services (264 channel), recording services (50+
+             channels), radio channels, pause liveTV"
     - desc: "Investigated and resolved production issues across the system ranging mobile applications (iOS, Android);
              HTML5 UI, Web Services (PHP, Yii), media backend (Python); deployment systems (Ansible, Docker), Networking
              issues (e.g. IGMP)"
 
   global_graphics:
-    - desc: "Planned iteration and release content with input from project team, product management, quality assurance and support"
+    - desc: "Planned iteration and release content with input from project team, product management, quality assurance
+             and support"
       tags: []
-    - desc: "Co-ordinated activities associated with software configuration management and delivered high-quality releases to agreed plans"
+    - desc: "Co-ordinated activities associated with software configuration management and delivered high-quality
+             releases to agreed plans"
       tags: []
-    - desc: "First action on joining team was to initiate daily regression tests to eliminate associated delays in development and QA"
+    - desc: "First action on joining team was to initiate daily regression tests to eliminate associated delays in
+             development and QA"
       tags: []
-    - desc: "Formulated framework for developer tests, using QT’s built-in javascript technology. Used to implement tests
-             during module development which were then built into a suite for avoiding regressions in subsequent iterations"
+    - desc: "Formulated framework for developer tests, using QT’s built-in javascript technology. Used to implement
+             tests during module development which were then built into a suite for avoiding regressions in subsequent
+             iterations"
       tags: []
     - desc: "Defined change request tracking processes and then evolved it throughout the project to support team’s
              constant process improvement"
@@ -165,49 +175,61 @@ achievements:
              consistency and minimised required effort for the regular import cycles"
       tags: []
     - desc: "Extended VB skills to Lotus Script, then used to migrate product backlogs into a combined database
-             simplifying cross-team request tracking, progress reporting and removing significant administrative overhead"
+             simplifying cross-team request tracking, progress reporting and removing significant administrative
+             overhead"
       tags: [ ]
-    - desc: "Acted as Scrum Master for the first Global Graphics project to use Agile methods, adapting and advancing"
-            " existing traditional processes and tools to expedite a rapid transition while minimising the impact of the
-            " change on team productivity"
+    - desc: "Acted as Scrum Master for the first Global Graphics project to use Agile methods, adapting and advancing
+            existing traditional processes and tools to expedite a rapid transition while minimising the impact of the
+            change on team productivity"
       tags: []
     - desc: "Investigated bugs prioritising and channelling to correct team for resolution"
       tags: []
 
   ttpcom:
-    - desc: "Used in-depth understanding of build tools, TTPCom's release system and Perforce to create a tool chain that
-             brought patches and releases together in a single process and reduced fix delivery times from 1 month to "
-             less than 1 day"
+    - desc: "Used in-depth understanding of build tools, TTPCom's release system and Perforce to create a tool chain
+             that brought patches and releases together in a single process and reduced fix delivery times from 1 month
+             to less than 1 day"
       tags: ['base']
     - desc: "Aligned development and client software configurations eliminating time to debug mismatches"
       tags: []
-    - desc: "Co-ordinated with other departments to agree a branching and integration strategy allowing a wider range of options to be delivered to future clients"
+    - desc: "Co-ordinated with other departments to agree a branching and integration strategy allowing a wider range of
+             options to be delivered to future clients"
       tags: []
-    - desc: "Wrote Perl scripts which analysed the build options applied to each software module in both development and client profiles pre-emptively identifying and resolving latent defects"
+    - desc: "Wrote Perl scripts which analysed the build options applied to each software module in both development and
+             client profiles pre-emptively identifying and resolving latent defects"
       tags: ['base']
-    - desc: "Used SQL and Perl skills to write tool to export issue tracking history empowering clients to resolve common issues independently"
+    - desc: "Used SQL and Perl skills to write tool to export issue tracking history empowering clients to resolve
+             common issues independently"
       tags: []
-    - desc: "Defined Support Processes for the Motorola WiMAX programme optimising communication with client engineers, while maintaining project control"
+    - desc: "Defined Support Processes for the Motorola WiMAX programme optimising communication with client engineers,
+             while maintaining project control"
       tags: []
-    - desc: "Chaired software issue reviews with customers ensuring correct prioritisation, open communication and building customer confidence"
+    - desc: "Chaired software issue reviews with customers ensuring correct prioritisation, open communication and
+             building customer confidence"
       tags: []
-    - desc: "Led co-operation between not only organisation and client but also the network operator and equipment provider to complete resolution of issues"
+    - desc: "Led co-operation between not only organisation and client but also the network operator and equipment
+             provider to complete resolution of issues"
       tags: []
-    - desc: "Designed and implemented framework migrating TTPCom tracking data to Motorola's preferred solution reducing cost of maintaining multiple systems"
+    - desc: "Designed and implemented framework migrating TTPCom tracking data to Motorola's preferred solution reducing
+             cost of maintaining multiple systems"
       tags: []
-    - desc: "Lead technical interface to strategic Asian customers successfully launching the companies first 3G handsets into Vodafone and O2"
+    - desc: "Lead technical interface to strategic Asian customers successfully launching the companies first 3G
+             handsets into Vodafone and O2"
       tags: []
     - desc: "Managed integration of TTPCom's MP3 and AMR solutions leading to successful launches"
       tags: []
     - desc: "Recruited test team leader, software and test engineers who became key to project success"
       tags: []
-    - desc: "Integrated AJAR (TTPCom's C++ Application Layer) onto new 3G chip-set overcoming platform, compiler and configuration issues"
+    - desc: "Integrated AJAR (TTPCom's C++ Application Layer) onto new 3G chip-set overcoming platform, compiler and
+             configuration issues"
       tags: []
-    - desc: "Investigated and debugged protocol stack issues through 2G physical layer, RF, DSP, L1, AT interface, 3G protocol stack and up to application"
+    - desc: "Investigated and debugged protocol stack issues through 2G physical layer, RF, DSP, L1, AT interface, 3G
+             protocol stack and up to application"
       tags: []
 
   pace:
-    - desc: "Negotiated and managed to budget a $1M supplier contract for development of software testing suite, a vital tool to build the long-term quality of Pace's MSTV product line"
+    - desc: "Negotiated and managed to budget a $1M supplier contract for development of software testing suite, a vital
+             tool to build the long-term quality of Pace's MSTV product line"
       tags: []
     - desc: "Organised, chaired and provided technical input to software design and code reviews"
       tags: []
@@ -219,9 +241,11 @@ achievements:
   philips:
     - desc: "Developed windows software for the configuration of and programming parameters of a pager"
       tags: []
-    - desc: "Designed, coded, debugged and maintained the Clock, IR and Configuration Manager components of a 2-way pager."
+    - desc: "Designed, coded, debugged and maintained the Clock, IR and Configuration Manager components of a 2-way
+             pager."
       tags: []
-    - desc: "Independently wrote automated test harness software, controlling the hardware inputs and monitoring chip outputs."
+    - desc: "Independently wrote automated test harness software, controlling the hardware inputs and monitoring chip
+             outputs."
       tags: []
 
 education:
