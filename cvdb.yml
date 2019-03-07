@@ -40,7 +40,7 @@ skill_groups:
   items:
   - "*Agile:* Certified Scrum Master"
   - "*Bug Tracking:* JIRA, Bugzilla"
-  - "*Continuous Integration:* Jenkins"
+  - "*Continuous Integration:* Jenkins, CirlceCI, TravisCI"
   - "*Build:* CMake, Buildroot, GNU Make, Autotools"
   - "*Version Control:* Git, SVN, CVS, Perforce"
 #  - "Zabbix service monitoring"
@@ -104,13 +104,13 @@ positions:
 
 achievements:
   contract_at_facebook:
-    - desc: "Port LogDevice to CMake build environment; allowing development outside Faceboook infrastructure."
+    - desc: "Port LogDevice to CMake build environment; allowing development outside Facebook infrastructure."
     - desc: "Configured Travis and then CircleCI CI pipelines for LogDevice compiling, unit and system testing publishing to images to DockerHub and documents to GitHub. Allowing rapid signal for developers of the impact of their diffs on LogDevice-OSS."
     - desc: "Debugged unit test (Google Test, Python); as exposed by running in CI environment (Docker)"
       tags: []
     - desc: "Creation of Debian packages for LogDevice; to allow rapid installation."
     - desc: "Internal CI pipelines using Facebook infrastructure to give internal developers feedback on every diff."
-    - desc: "Ported FBThrift-py3 to open source, the first Cython compiled open source offering from Facebook and a key component in opening many more projects to the community in its position as a building block for Facebook systems and servicesx"
+    - desc: "Ported FBThrift-py3 to open source, the first Cython compiled open source offering from Facebook and a key component in opening many more projects to the community in its position as a building block for Facebook systems and services"
   amino:
     - desc: "Implemented rsyslog support to the AminoMOVE CloudTV media backend, enabling its output to be fed to the
              log collection and analysis tools Splunk and Unomaly allowing production deployment issues to be field
@@ -137,7 +137,7 @@ achievements:
       tags: []
     - desc: "After Amino acquisition of Booxmedia, led the first cross-site team of Amino engineers taking our existing
              skills in Linux, multimedia decode for consumer devices and re-apply in the the delivery of OTT CloudTV video services "
-    - desc: "Working closing with our client through daily cross-company scrum stand-ups delivered Amino’s first end-to-end
+    - desc: "Working closely with our client through daily cross-company scrum stand-ups delivered Amino’s first end-to-end
              Service to screen multi-media video solution delivered through multiple DRM protected ABR formats (HLS, DASH, MSS).
              Including live streaming services (264 channel), recording services (50+ channels), radio channels, pause liveTV"
     - desc: "Investigated and resolved production issues across the system ranging mobile applications (iOS, Android);
