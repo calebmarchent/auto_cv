@@ -11,6 +11,9 @@ from docx.shared import Inches, Pt, Mm
 from docx.enum.text import WD_TAB_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.style import WD_STYLE_TYPE
+from spellchecker import SpellChecker
+import re
+import numbers
 
 import datetime
 
@@ -29,6 +32,71 @@ with open("cvdb.yml", 'r') as stream:
         cvdb = yaml.load(stream, Loader=yaml.Loader)
     except yaml.YAMLError as exc:
         print(exc)
+
+# Run spell check across the database
+spell = SpellChecker()
+spell.word_frequency.load_words([
+    "ABR",
+    "AmiNET",
+    "Amino",
+    "AminoMOVE",
+    "Ansible",
+    "Aquent",
+    "autotools",
+    "AVG",
+    "AWS",
+    "Booxmedia",
+    "Bugzilla",
+    "caleb.marchent@icloud.com",
+    "CB25",
+    "CircleCI",
+    "CloudTV",
+    "CMake",
+    "Cython",
+    "Debian",
+    "DockerHub",
+    "Entone",
+    "Facebook",
+    "Fachhochschule",
+    "GitHub",
+    "GPRS",
+    "HTML",
+    "HTML5",
+    "ISEB",
+    "Javascript",
+    "JIRA",
+    "Landbeach",
+    "Linux",
+    "LogDevice",
+    "Perl",
+    "PRINCE2",
+    "TTPCom",
+    "Zabbix",
+    ])
+
+def check_text_spelling(text):
+    try:
+        words = [ word.rstrip(".,;:)").lstrip("(") for word in text.split() if len(word) > 0 ]
+    except:
+        print("Failed to split:\n \"{}\"".format(text))
+    bad = spell.unknown(words)
+    for word in bad:
+        print ("Spelling error {}".format(word))
+
+
+def spellcheck_struct(s):
+    if isinstance(s, dict):
+        for k, v in s.items():
+            spellcheck_struct(v)
+    elif isinstance(s, list):
+        for item in s:
+            spellcheck_struct(item)
+    elif isinstance(s, str):
+        check_text_spelling(s)
+    elif s is not None and not isinstance(s, numbers.Number):
+        raise ValueError("Unexpected item in the spellcheck_struct : \"{}\"".format(s))
+
+spellcheck_struct(cvdb)
 
 # Process the imported YAML; creating the structure required for the document
 # from the source database
