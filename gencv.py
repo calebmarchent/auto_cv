@@ -125,7 +125,8 @@ def check_text_spelling(text):
 def spellcheck_struct(s):
     if isinstance(s, dict):
         for k, v in s.items():
-            spellcheck_struct(v)
+            if k != "tags":
+                spellcheck_struct(v)
     elif isinstance(s, list):
         for item in s:
             spellcheck_struct(item)
