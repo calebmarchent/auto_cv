@@ -36,49 +36,73 @@ with open("cvdb.yml", 'r') as stream:
 # Run spell check across the database
 spell = SpellChecker()
 spell.word_frequency.load_words([
+    "2G",
+    "3G",
+    "4-year",
+    "8am",
+    "8pm",
+    "9FU",
     "ABR",
+    "AVG",
+    "AWS",
     "AmiNET",
     "Amino",
     "AminoMOVE",
     "Ansible",
     "Aquent",
-    "autotools",
-    "AVG",
-    "AWS",
+    "Berryville",
     "Booxmedia",
     "Bugzilla",
-    "caleb.marchent@icloud.com",
+    "Buildroot",
     "CB25",
+    "CMake",
     "CircleCI",
     "CloudTV",
-    "CMake",
     "Cython",
     "Debian",
     "DockerHub",
     "Entone",
     "Facebook",
     "Fachhochschule",
-    "GitHub",
     "GPRS",
+    "GitHub",
+    "Google",
+    "HLS",
     "HTML",
     "HTML5",
+    "IGMP",
     "ISEB",
-    "Javascript",
     "JIRA",
+    "Javascript",
     "Landbeach",
     "Linux",
     "LogDevice",
-    "Perl",
+    "MP3",
+    "MSTV",
+    "MySQL",
+    "PHP",
     "PRINCE2",
+    "Perl",
+    "Rsyslog",
+    "STB",
+    "Splunk",
     "TTPCom",
+    "TavisCI",
+    "TestTrack",
+    "Unomaly",
+    "WiMAX",
+    "Yii",
     "Zabbix",
+    "Autotools",
+    "caleb.marchent@icloud.com",
+    "fbthrift-py3",
     ])
 
 def check_text_spelling(text):
     try:
-        words = [ word.rstrip(".,;:)").lstrip("(") for word in text.split() if len(word) > 0 ]
+        words = [ word.rstrip(".,;:)*").lstrip("*(") for word in text.split() if len(word) > 0 ]
     except:
-        print("Failed to split:\n \"{}\"".format(text))
+        raise ValueError("Failed to split:\n \"{}\"".format(text))
     bad = spell.unknown(words)
     for word in bad:
         print ("Spelling error {}".format(word))
