@@ -69,7 +69,7 @@ Linux software development for media-streaming devices (STBs) and services. Hire
 
 * After Amino acquisition of Booxmedia, led the first cross-site team of Amino engineers taking our existing skills in Linux, multimedia decode for consumer devices and re-apply in the the delivery of OTT CloudTV video services 
 
-* Working closely with our client through daily cross-company scrum stand-ups delivered Amino’s first end-to-end Service to screen multi-media video solution delivered through multiple DRM protected ABR formats (HLS, DASH, MSS). Including live streaming services (264 channel), recording services (50+ channels), radio channels, pause liveTV
+* Working closely with our client through daily cross-company scrum stand-ups delivered Amino’s first end-to-end Service to screen multi-media video solution delivered through multiple DRM protected ABR formats (HLS, DASH, MSS). Including live streaming services (264 channel), recording services (50+ channels), radio channels, pause live TV
 
 * Investigated and resolved production issues across the system ranging mobile applications (iOS, Android); HTML5 UI, Web Services (PHP, Yii), media backend (Python); deployment systems (Ansible, Docker), Networking issues (e.g. IGMP)
 
@@ -119,7 +119,7 @@ Education
 --
 
 <table>
-    <tr><td>Certified ScrumMaster (CSM)<td class="date">2015</td>
+    <tr><td>Certified Scrum Master (CSM)<td class="date">2015</td>
 </table>
 
 <table>

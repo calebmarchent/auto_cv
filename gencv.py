@@ -36,9 +36,12 @@ with open("cvdb.yml", 'r') as stream:
 # Run spell check across the database
 spell = SpellChecker()
 spell.word_frequency.load_words([
+    "1m",
     "2G",
     "3G",
+    "3rd",
     "4-year",
+    "50+",
     "8am",
     "8pm",
     "9FU",
@@ -50,6 +53,7 @@ spell.word_frequency.load_words([
     "AminoMOVE",
     "Ansible",
     "Aquent",
+    "Autotools",
     "Berryville",
     "Booxmedia",
     "Bugzilla",
@@ -87,16 +91,23 @@ spell.word_frequency.load_words([
     "STB",
     "Splunk",
     "TTPCom",
-    "TravisCI",
     "TestTrack",
+    "TravisCI",
     "Unomaly",
     "WiMAX",
     "Yii",
     "Zabbix",
-    "Autotools",
+    "backend",
     "caleb.marchent@icloud.com",
+    "debug",
+    "debugged",
     "fbthrift-py3",
-    "preemptively"
+    "mentoring",
+    "preemptively",
+    "stbs",
+    "svn",
+    "toolchains",
+    "toolsmith",
     ])
 
 def check_text_spelling(text):
@@ -105,7 +116,7 @@ def check_text_spelling(text):
         text = text.replace("_", " ")
         words = text.split()
         # Strip out punctuation and bold text markers
-        words = [ word.rstrip(".,;:)*").lstrip("*($") for word in words ]
+        words = [ word.rstrip(".,;:)*\"").lstrip("*($\"") for word in words ]
         # Strip off possessive apostrophe-s
         words = [ word[:-2] if word.endswith("'s")
                             or word.endswith("’s") else word for word in words ]

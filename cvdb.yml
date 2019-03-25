@@ -149,7 +149,7 @@ achievements:
     - desc: "Working closely with our client through daily cross-company scrum stand-ups delivered Amino’s first
              end-to-end Service to screen multi-media video solution delivered through multiple DRM protected ABR
              formats (HLS, DASH, MSS). Including live streaming services (264 channel), recording services (50+
-             channels), radio channels, pause liveTV"
+             channels), radio channels, pause live TV"
     - desc: "Investigated and resolved production issues across the system ranging mobile applications (iOS, Android);
              HTML5 UI, Web Services (PHP, Yii), media backend (Python); deployment systems (Ansible, Docker), Networking
              issues (e.g. IGMP)"
@@ -249,7 +249,7 @@ achievements:
       tags: []
 
 education:
-- desc: "Certified ScrumMaster (CSM)"
+- desc: "Certified Scrum Master (CSM)"
   date: 2015
 - desc: "PRINCE2 Practitioner"
   date: 2008
