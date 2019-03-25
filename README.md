@@ -32,7 +32,7 @@ Experience
 **Contract via Aquent at Facebook** (2018 - )
 
 
-Contract to deliver LogDevice Open Source, making a key component of Facebooks data-infrastructure available for use and contribution by the open source community
+Contract to deliver LogDevice Open Source, making a key component of Facebook's data-infrastructure available for use and contribution by the open source community
 
 
 
@@ -93,7 +93,7 @@ Mobile Telecommunications; GSM, GPRS and the first Intel-based 3G handset. Appoi
 
 * Used in-depth understanding of build tools, TTPCom's release system and Perforce to create a tool chain that brought patches and releases together in a single process and reduced fix delivery times from 1 month to less than 1 day
 
-* Wrote Perl scripts which analysed the build options applied to each software module in both development and client profiles pre-emptively identifying and resolving latent defects
+* Wrote Perl scripts which analysed the build options applied to each software module in both development and client profiles preemptively identifying and resolving latent defects
 
 
 

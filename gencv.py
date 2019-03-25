@@ -87,7 +87,7 @@ spell.word_frequency.load_words([
     "STB",
     "Splunk",
     "TTPCom",
-    "TavisCI",
+    "TravisCI",
     "TestTrack",
     "Unomaly",
     "WiMAX",
@@ -96,14 +96,28 @@ spell.word_frequency.load_words([
     "Autotools",
     "caleb.marchent@icloud.com",
     "fbthrift-py3",
+    "preemptively"
     ])
 
 def check_text_spelling(text):
     try:
-        words = [ word.rstrip(".,;:)*").lstrip("*(") for word in text.split() if len(word) > 0 ]
+        # Handle hyphenated or underscored words, by replacing with spaces
+        text = text.replace("_", " ")
+        words = text.split()
+        # Strip out punctuation and bold text markers
+        words = [ word.rstrip(".,;:)*").lstrip("*($") for word in words ]
+        # Strip off possessive apostrophe-s
+        words = [ word[:-2] if word.endswith("'s")
+                            or word.endswith("’s") else word for word in words ]
+        # Drop any items that resulted in blank spaces
+        words = [ word for word in words if len(word) > 0 ]
     except:
         raise ValueError("Failed to split:\n \"{}\"".format(text))
-    bad = spell.unknown(words)
+    unknown = spell.unknown(words)
+    # Split any hypenated words and check again, this would ensure "known
+    # hypenated words" are handled correctly, before falling back
+    dehyphenated = [ word for c_list in unknown for word in c_list.split("-") ]
+    bad = spell.unknown(dehyphenated)
     for word in bad:
         print ("Spelling error {}".format(word))
 

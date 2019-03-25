@@ -66,7 +66,7 @@ positions:
   - brief: contract_at_facebook
     company_name: "Contract via Aquent at Facebook"
     title: "Platform Engineer (Contract)"
-    company_summary: "Contract to deliver LogDevice Open Source, making a key component of Facebooks data-infrastructure
+    company_summary: "Contract to deliver LogDevice Open Source, making a key component of Facebook's data-infrastructure
        available for use and contribution by the open source community"
     start: 2018
   - brief: amino
@@ -196,7 +196,7 @@ achievements:
              options to be delivered to future clients"
       tags: []
     - desc: "Wrote Perl scripts which analysed the build options applied to each software module in both development and
-             client profiles pre-emptively identifying and resolving latent defects"
+             client profiles preemptively identifying and resolving latent defects"
       tags: ['base']
     - desc: "Used SQL and Perl skills to write tool to export issue tracking history empowering clients to resolve
              common issues independently"
