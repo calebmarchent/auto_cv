@@ -12,7 +12,6 @@ from docx.enum.text import WD_TAB_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.style import WD_STYLE_TYPE
 from spellchecker import SpellChecker
-import re
 import numbers
 
 import datetime
@@ -110,27 +109,26 @@ spell.word_frequency.load_words([
     "toolsmith",
     ])
 
+
 def check_text_spelling(text):
-    try:
-        # Handle hyphenated or underscored words, by replacing with spaces
-        text = text.replace("_", " ")
-        words = text.split()
-        # Strip out punctuation and bold text markers
-        words = [ word.rstrip(".,;:)*\"").lstrip("*($\"") for word in words ]
-        # Strip off possessive apostrophe-s
-        words = [ word[:-2] if word.endswith("'s")
-                            or word.endswith("’s") else word for word in words ]
-        # Drop any items that resulted in blank spaces
-        words = [ word for word in words if len(word) > 0 ]
-    except:
-        raise ValueError("Failed to split:\n \"{}\"".format(text))
+    # Handle hyphenated or underscored words, by replacing with spaces
+    text = text.replace("_", " ")
+    words = text.split()
+    # Strip out punctuation and bold text markers
+    words = [word.rstrip(".,;:)*\"").lstrip("*($\"") for word in words]
+    # Strip off possessive apostrophe-s
+    words = [word[:-2] if word.endswith("'s")
+             or word.endswith("’s") else word for word in words]
+    # Drop any items that resulted in blank spaces
+    words = [word for word in words if len(word) > 0]
+
     unknown = spell.unknown(words)
-    # Split any hypenated words and check again, this would ensure "known
-    # hypenated words" are handled correctly, before falling back
-    dehyphenated = [ word for c_list in unknown for word in c_list.split("-") ]
+    # Split any hyphenated words and check again, this would ensure "known
+    # hyphenated words" are handled correctly, before falling back
+    dehyphenated = [word for c_list in unknown for word in c_list.split("-")]
     bad = spell.unknown(dehyphenated)
     for word in bad:
-        print ("Spelling error {}".format(word))
+        print("Spelling error {}".format(word))
 
 
 def spellcheck_struct(s):
@@ -144,7 +142,8 @@ def spellcheck_struct(s):
     elif isinstance(s, str):
         check_text_spelling(s)
     elif s is not None and not isinstance(s, numbers.Number):
-        raise ValueError("Unexpected item in the spellcheck_struct : \"{}\"".format(s))
+        raise ValueError(f"Unexpected item in the spellcheck_struct : \"{s}\"")
+
 
 spellcheck_struct(cvdb)
 
@@ -174,7 +173,9 @@ processed_cvdb['achievements'] = {}
 for position, position_achievements in cvdb['achievements'].items():
     processed_cvdb['achievements'][position] = list()
     for achievement in position_achievements:
-        if ('tags' not in achievement) or bool(set(output_options['include_tags']) & set(achievement['tags'])):
+        if ('tags' not in achievement) \
+                or bool(set(output_options['include_tags']) &
+                        set(achievement['tags'])):
             processed_cvdb['achievements'][position].append(achievement)
 
 processed_cvdb['education'] = cvdb['education']
@@ -194,8 +195,6 @@ with open("README.md", "wb") as fh:
     fh.write(template.render(processed_cvdb).encode('utf-8'))
 
 if OUTPUT_DOCUMENT_TYPE == "html":
-
-
     template = env.get_template('legacy_cv.html')
 
     # to save the results
@@ -205,9 +204,6 @@ if OUTPUT_DOCUMENT_TYPE == "html":
 elif OUTPUT_DOCUMENT_TYPE == "word":
 
     document = Document()
-
-#   List known styles and types; useful for finding correct style name
-    # for style in document.styles: print "{} ({})".format(style.name, style.type)
 
     for section in document.sections:
         section.left_margin = Inches(0.75)
@@ -261,8 +257,9 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     document.add_heading('Key Skills', level=2)
 
     # Find the maximum number of skills in a group
-    table = document.add_table(rows=(2 if output_options['show_skill_headings'] else 1),
-                               cols=len(processed_cvdb['skill_groups']))
+    table = document.add_table(
+        rows=(2 if output_options['show_skill_headings'] else 1),
+        cols=len(processed_cvdb['skill_groups']))
     col = 0
 
     # Populate table with skills, each cell will have a default paragraph
@@ -275,7 +272,8 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
         idx = 0
         hdr_cells = table.columns[col].cells
         if output_options['show_skill_headings']:
-            hdr_cells[row].paragraphs[0].add_run(skill_group['heading']).bold = True
+            hdr_cells[row].paragraphs[0].add_run(
+                skill_group['heading']).bold = True
             row += 1
         for skill in skill_group['items']:
             if idx == 0:
@@ -286,9 +284,9 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
 
             # Look for embolden sections and split run to illuminate the text
             # between them
-            # FIXME: The code below alternates boldness on each occurance of *,
+            # FIXME: The code below alternates boldness on each occurrence of *
             # while it would work for now, it is not extensible to handle other
-            # formatting charaters.
+            # formatting characters.
             b = False
             for run in skill.split('*'):
                 p.add_run(run).bold = b
@@ -309,21 +307,24 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
         else:
             p.add_run("\t\t")
 
-        if 'finish' in position:
-           finish_txt = position['finish']
-        else:
-           finish_txt = 'to date'
+        finish_txt = position["finish"] if "finish" in position else "to date"
         p.add_run(str(position['start']) + " - " + str(finish_txt)).bold = True
 
-        p.paragraph_format.tab_stops.add_tab_stop(Inches(3), WD_TAB_ALIGNMENT.CENTER)
-        p.paragraph_format.tab_stops.add_tab_stop(Inches(6), WD_TAB_ALIGNMENT.RIGHT)
+        p.paragraph_format.tab_stops.add_tab_stop(Inches(3),
+                                                  WD_TAB_ALIGNMENT.CENTER)
+        p.paragraph_format.tab_stops.add_tab_stop(Inches(6),
+                                                  WD_TAB_ALIGNMENT.RIGHT)
 
         if 'company_summary' in position:
-            document.add_paragraph(position['company_summary'], style='company_summary')
+            document.add_paragraph(
+                position['company_summary'],
+                style='company_summary')
 
         if position['brief'] in processed_cvdb['achievements']:
-            for achievement in processed_cvdb['achievements'][position['brief']]:
-                p = document.add_paragraph(achievement['desc'],
+            for achievement in\
+                    processed_cvdb['achievements'][position['brief']]:
+                p = document.add_paragraph(
+                    achievement['desc'],
                     style='achievement_bullet')
 
     document.add_heading('Education', level=2)
@@ -331,8 +332,10 @@ elif OUTPUT_DOCUMENT_TYPE == "word":
     for experience in processed_cvdb['education']:
         p = document.add_paragraph()
         p.paragraph_format.space_after = Pt(0)
-        p.add_run("{}\t{}".format(experience['desc'], experience['date'])).bold = True
-        p.paragraph_format.tab_stops.add_tab_stop(Inches(6), WD_TAB_ALIGNMENT.RIGHT)
+        p.add_run("{}\t{}".format(experience['desc'],
+                                  experience['date'])).bold = True
+        p.paragraph_format.tab_stops.add_tab_stop(Inches(6),
+                                                  WD_TAB_ALIGNMENT.RIGHT)
         if 'additional_info' in experience:
             p.add_run("\n{}".format(experience['additional_info']))
 
