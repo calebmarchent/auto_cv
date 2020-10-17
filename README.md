@@ -29,7 +29,16 @@ Experience
 --
 
 
-**Contract via Aquent at Facebook** (2018 - )
+**Audio Analytic** (2019 - )
+
+
+Established new Platforms team, to build-out the infrastructure and tooling to support the machine learning of sounds.
+
+
+
+
+
+**Contract via Aquent at Facebook** (2018 - 2019)
 
 
 Contract to deliver LogDevice Open Source, making a key component of Facebook's data-infrastructure available for use and contribution by the open source community

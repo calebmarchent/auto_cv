@@ -63,12 +63,19 @@ skill_groups:
 
 
 positions:
+  - brief: audio_analytic
+    company_name: "Audio Analytic"
+    title: "Platforms Engineering Lead"
+    company_summary: "Established new Platforms team, to build-out the infrastructure and tooling to support the machine
+      learning of sounds."
+    start: 2019
   - brief: contract_at_facebook
     company_name: "Contract via Aquent at Facebook"
     title: "Platform Engineer (Contract)"
     company_summary: "Contract to deliver LogDevice Open Source, making a key component of Facebook's data-infrastructure
        available for use and contribution by the open source community"
     start: 2018
+    finish: 2019
   - brief: amino
     company_name: "Amino Communications"
     company_summary: 'Linux software development for media-streaming devices (STBs) and services. Hired to fill two
